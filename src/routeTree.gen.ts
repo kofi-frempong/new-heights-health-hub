@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as UploadPrescriptionRouteImport } from './routes/upload-prescription'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ShopRouteImport } from './routes/shop'
 import { Route as HealthTipsRouteImport } from './routes/health-tips'
 import { Route as ContactRouteImport } from './routes/contact'
@@ -20,6 +21,11 @@ import { Route as HealthTipsSlugRouteImport } from './routes/health-tips.$slug'
 const UploadPrescriptionRoute = UploadPrescriptionRouteImport.update({
   id: '/upload-prescription',
   path: '/upload-prescription',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ShopRoute = ShopRouteImport.update({
@@ -59,6 +65,7 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/health-tips': typeof HealthTipsRouteWithChildren
   '/shop': typeof ShopRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/upload-prescription': typeof UploadPrescriptionRoute
   '/health-tips/$slug': typeof HealthTipsSlugRoute
 }
@@ -68,6 +75,7 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/health-tips': typeof HealthTipsRouteWithChildren
   '/shop': typeof ShopRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/upload-prescription': typeof UploadPrescriptionRoute
   '/health-tips/$slug': typeof HealthTipsSlugRoute
 }
@@ -78,6 +86,7 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/health-tips': typeof HealthTipsRouteWithChildren
   '/shop': typeof ShopRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/upload-prescription': typeof UploadPrescriptionRoute
   '/health-tips/$slug': typeof HealthTipsSlugRoute
 }
@@ -89,6 +98,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/health-tips'
     | '/shop'
+    | '/sitemap.xml'
     | '/upload-prescription'
     | '/health-tips/$slug'
   fileRoutesByTo: FileRoutesByTo
@@ -98,6 +108,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/health-tips'
     | '/shop'
+    | '/sitemap.xml'
     | '/upload-prescription'
     | '/health-tips/$slug'
   id:
@@ -107,6 +118,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/health-tips'
     | '/shop'
+    | '/sitemap.xml'
     | '/upload-prescription'
     | '/health-tips/$slug'
   fileRoutesById: FileRoutesById
@@ -117,6 +129,7 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   HealthTipsRoute: typeof HealthTipsRouteWithChildren
   ShopRoute: typeof ShopRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   UploadPrescriptionRoute: typeof UploadPrescriptionRoute
 }
 
@@ -127,6 +140,13 @@ declare module '@tanstack/react-router' {
       path: '/upload-prescription'
       fullPath: '/upload-prescription'
       preLoaderRoute: typeof UploadPrescriptionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/shop': {
@@ -192,6 +212,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   HealthTipsRoute: HealthTipsRouteWithChildren,
   ShopRoute: ShopRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
   UploadPrescriptionRoute: UploadPrescriptionRoute,
 }
 export const routeTree = rootRouteImport
