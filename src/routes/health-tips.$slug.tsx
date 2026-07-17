@@ -68,7 +68,7 @@ function ArticlePage() {
 
       <div className="mx-auto max-w-3xl px-4 py-14 sm:px-6 lg:px-8">
         <div className="space-y-6 text-lg leading-relaxed text-foreground/90">
-          {article.body.map((p, i) => <p key={i}>{p}</p>)}
+          {article.body.map((p: string, i: number) => <p key={i}>{p}</p>)}
         </div>
       </div>
 
