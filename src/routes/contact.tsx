@@ -106,9 +106,9 @@ function ContactPage() {
 
         <div className="space-y-4">
           <InfoCard icon={<Phone className="h-5 w-5" />} title="Call us" body={<a href={`tel:${PHONE_TEL}`} className="text-primary hover:underline">{PHONE_DISPLAY}</a>} sub="Fastest way to reach a pharmacist" />
-          <InfoCard icon={<Mail className="h-5 w-5" />} title="Email" body={<a href="mailto:hello@newheightsrx.com" className="text-primary hover:underline">hello@newheightsrx.com</a>} sub="We respond within one business day" />
+          <InfoCard icon={<Mail className="h-5 w-5" />} title="Email" body={<a href="mailto:info.newheightspharma@gmail.com" className="text-primary hover:underline">info.newheightspharma@gmail.com</a>} sub="We respond within one business day" />
           <InfoCard icon={<MessageCircle className="h-5 w-5" />} title="WhatsApp" body={<a href={waLink()} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Chat with us on WhatsApp</a>} sub="Best for sending prescriptions or quick questions" />
-          <InfoCard icon={<MapPin className="h-5 w-5" />} title="Visit" body="128 Summit Ave, New Heights, CA 94102" sub="Parking available in the rear" />
+          <InfoCard icon={<MapPin className="h-5 w-5" />} title="Visit" body="Old Ashongman - Ablorh Adjei Road, Accra. GPS Address: GE-085-3190" sub="Parking available in the rear" />
           <div className="overflow-hidden rounded-3xl border border-border/60 bg-card">
             <div className="flex items-center gap-3 p-5">
               <div className="grid h-10 w-10 place-items-center rounded-xl bg-secondary text-primary">
@@ -116,14 +116,14 @@ function ContactPage() {
               </div>
               <div>
                 <p className="font-display font-semibold text-foreground">Hours</p>
-                <p className="text-xs text-muted-foreground">Mon–Fri 8–8 · Sat 9–6 · Sun 10–4</p>
+                <p className="text-xs text-muted-foreground">Mon–Sat 7:30am–10pm · Sun 2pm–10pm</p>
               </div>
             </div>
           </div>
           <div className="overflow-hidden rounded-3xl border border-border/60 bg-card">
             <iframe
               title="Map"
-              src="https://www.openstreetmap.org/export/embed.html?bbox=-122.4406,37.7570,-122.3906,37.7970&layer=mapnik"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=-0.2370,5.5537,-0.1370,5.6537&layer=mapnik&marker=5.6037,-0.1870"
               className="h-56 w-full border-0"
               loading="lazy"
             />
