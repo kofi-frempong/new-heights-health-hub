@@ -1,10 +1,12 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Upload, Truck, ShieldCheck, Zap, Wallet, Check, Star, Quote } from "lucide-react";
+import { ArrowRight, Truck, ShieldCheck, Zap, Check, Star, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ProductCard } from "@/components/site/ProductCard";
 import { PRODUCTS } from "@/lib/products";
 import { ARTICLES } from "@/lib/articles";
 import heroImg from "@/assets/hero-pharmacist.jpg";
+import logoAsset from "@/assets/new-heights-logo.jpeg.asset.json";
+import { waLink } from "@/lib/whatsapp";
 
 export const Route = createFileRoute("/")({
   component: HomePage,
@@ -14,19 +16,12 @@ const TRUST = [
   { icon: Truck, title: "Free local delivery", desc: "Same-day to nearby ZIPs" },
   { icon: ShieldCheck, title: "Licensed pharmacists", desc: "On call 7 days a week" },
   { icon: Zap, title: "Fast refills", desc: "Ready in under an hour" },
-  { icon: Wallet, title: "Insurance accepted", desc: "Most major plans" },
 ];
 
 const STEPS = [
-  { n: "01", title: "Upload your prescription", desc: "Snap a photo or upload a PDF — we'll take it from there." },
+  { n: "01", title: "Send us your prescription on WhatsApp", desc: "Message a clear photo or PDF of your Rx — we'll take it from there." },
   { n: "02", title: "We verify & prepare", desc: "A licensed pharmacist reviews your Rx and confirms your details." },
   { n: "03", title: "Pickup or delivery", desc: "Choose in-store pickup or free local delivery to your door." },
-];
-
-const TESTIMONIALS = [
-  { name: "Sarah M.", role: "Regular customer", quote: "The pharmacists actually know me by name. Refills that used to take hours now take fifteen minutes." },
-  { name: "David L.", role: "Caring for a parent", quote: "Managing my mom's medications used to be overwhelming. New Heights made it simple and safe." },
-  { name: "Priya K.", role: "New parent", quote: "Free delivery has been a lifesaver with a newborn. And they always double-check everything." },
 ];
 
 function HomePage() {
@@ -43,6 +38,11 @@ function HomePage() {
 
         <div className="mx-auto grid max-w-7xl gap-12 px-4 py-16 sm:px-6 lg:grid-cols-2 lg:items-center lg:gap-8 lg:px-8 lg:py-24">
           <div>
+            <img
+              src={logoAsset.url}
+              alt="New Heights Pharmacy"
+              className="mb-6 h-20 w-auto object-contain sm:h-24"
+            />
             <span className="inline-flex items-center gap-2 rounded-full border border-border/60 bg-background/70 px-3 py-1 text-xs font-medium text-primary backdrop-blur">
               <span className="h-1.5 w-1.5 rounded-full bg-accent" />
               Pharmacy is open — refills in under an hour
@@ -61,10 +61,15 @@ function HomePage() {
                   Shop Now <ArrowRight className="ml-1.5 h-4 w-4" />
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="rounded-full border-accent bg-accent px-6 text-base text-accent-foreground hover:bg-accent/90 hover:text-accent-foreground">
-                <Link to="/upload-prescription">
-                  <Upload className="mr-1.5 h-4 w-4" /> Upload Prescription
-                </Link>
+              <Button
+                asChild
+                size="lg"
+                className="rounded-full px-6 text-base text-white hover:opacity-90"
+                style={{ backgroundColor: "#25D366" }}
+              >
+                <a href={waLink()} target="_blank" rel="noopener noreferrer">
+                  <MessageCircle className="mr-1.5 h-4 w-4" /> Send Prescription via WhatsApp
+                </a>
               </Button>
             </div>
             <div className="mt-8 flex items-center gap-6 text-sm text-muted-foreground">
@@ -116,7 +121,7 @@ function HomePage() {
 
       {/* Trust badges */}
       <section className="mx-auto max-w-7xl px-4 pb-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 gap-3 rounded-3xl border border-border/60 bg-card p-4 sm:p-6 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-3 rounded-3xl border border-border/60 bg-card p-4 sm:grid-cols-3 sm:p-6">
           {TRUST.map((t) => (
             <div key={t.title} className="flex items-start gap-3 rounded-2xl p-3">
               <div className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-secondary text-primary">
@@ -172,7 +177,9 @@ function HomePage() {
           </div>
           <div className="mt-10 text-center">
             <Button asChild size="lg" className="rounded-full bg-primary px-6 text-base hover:bg-primary/90">
-              <Link to="/upload-prescription"><Upload className="mr-1.5 h-4 w-4" /> Start a refill</Link>
+              <a href={waLink()} target="_blank" rel="noopener noreferrer">
+                <MessageCircle className="mr-1.5 h-4 w-4" /> Send Prescription via WhatsApp
+              </a>
             </Button>
           </div>
         </div>
@@ -214,37 +221,6 @@ function HomePage() {
               </div>
             </Link>
           ))}
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      <section className="bg-surface py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center">
-            <p className="text-sm font-medium uppercase tracking-wider text-accent">Testimonials</p>
-            <h2 className="mt-1 font-display text-3xl font-bold text-foreground sm:text-4xl">
-              Cared for, not just filled
-            </h2>
-          </div>
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
-            {TESTIMONIALS.map((t) => (
-              <figure key={t.name} className="rounded-3xl border border-border/60 bg-card p-8">
-                <Quote className="h-8 w-8 text-accent" />
-                <blockquote className="mt-4 text-base leading-relaxed text-foreground">
-                  "{t.quote}"
-                </blockquote>
-                <figcaption className="mt-6 flex items-center gap-3">
-                  <div className="grid h-10 w-10 place-items-center rounded-full bg-primary/10 font-display font-semibold text-primary">
-                    {t.name.charAt(0)}
-                  </div>
-                  <div>
-                    <p className="text-sm font-semibold text-foreground">{t.name}</p>
-                    <p className="text-xs text-muted-foreground">{t.role}</p>
-                  </div>
-                </figcaption>
-              </figure>
-            ))}
-          </div>
         </div>
       </section>
     </div>

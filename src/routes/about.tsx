@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ShieldCheck, Heart, Users, Wallet, Clock, MapPin } from "lucide-react";
+import { ShieldCheck, Heart, Users, Sparkles, Clock, MapPin } from "lucide-react";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -24,7 +24,7 @@ const WHY = [
   { icon: ShieldCheck, title: "Licensed & accredited", desc: "State-licensed with rigorous safety standards." },
   { icon: Heart, title: "Personalized care", desc: "We know your history and your goals." },
   { icon: Users, title: "Community-focused", desc: "Local families, local pharmacists." },
-  { icon: Wallet, title: "Insurance accepted", desc: "Most major plans and Medicare Part D." },
+  { icon: Sparkles, title: "Wellness-first", desc: "Curated vitamins and everyday essentials." },
 ];
 
 function AboutPage() {

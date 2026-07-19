@@ -1,5 +1,7 @@
 import { Link } from "@tanstack/react-router";
-import { Facebook, Instagram, Twitter, Plus, MapPin, Phone, Mail, Clock } from "lucide-react";
+import { Facebook, Instagram, Twitter, MapPin, Phone, Mail, Clock, MessageCircle } from "lucide-react";
+import { Logo } from "@/components/site/Logo";
+import { PHONE_DISPLAY, PHONE_TEL, waLink } from "@/lib/whatsapp";
 
 export function Footer() {
   return (
@@ -7,14 +9,7 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
         <div className="grid gap-10 lg:grid-cols-4">
           <div>
-            <div className="flex items-center gap-2">
-              <span className="grid h-9 w-9 place-items-center rounded-xl bg-primary text-primary-foreground">
-                <Plus className="h-5 w-5" />
-              </span>
-              <span className="font-display text-lg font-bold text-foreground">
-                New Heights <span className="text-primary">Pharmacy</span>
-              </span>
-            </div>
+            <Logo className="h-14 w-auto" />
             <p className="mt-4 max-w-xs text-sm text-muted-foreground">
               Personalized, community-first pharmacy care. In the neighborhood since 2012.
             </p>
@@ -33,7 +28,6 @@ export function Footer() {
               {[
                 { to: "/", l: "Home" },
                 { to: "/shop", l: "Shop" },
-                { to: "/upload-prescription", l: "Upload Prescription" },
                 { to: "/health-tips", l: "Health Tips" },
                 { to: "/about", l: "About Us" },
                 { to: "/contact", l: "Contact Us" },
@@ -44,6 +38,11 @@ export function Footer() {
                   </Link>
                 </li>
               ))}
+              <li>
+                <a href={waLink()} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-muted-foreground transition-colors hover:text-primary">
+                  <MessageCircle className="h-3.5 w-3.5" /> Send Rx on WhatsApp
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -60,7 +59,7 @@ export function Footer() {
             <h4 className="font-display text-sm font-semibold uppercase tracking-wider text-foreground">Get in Touch</h4>
             <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
               <li className="flex items-start gap-2"><MapPin className="mt-0.5 h-4 w-4 text-primary shrink-0" /><span>128 Summit Ave,<br />New Heights, CA 94102</span></li>
-              <li className="flex items-start gap-2"><Phone className="mt-0.5 h-4 w-4 text-primary shrink-0" /><a href="tel:+15551234567" className="hover:text-primary">(555) 123-4567</a></li>
+              <li className="flex items-start gap-2"><Phone className="mt-0.5 h-4 w-4 text-primary shrink-0" /><a href={`tel:${PHONE_TEL}`} className="hover:text-primary">{PHONE_DISPLAY}</a></li>
               <li className="flex items-start gap-2"><Mail className="mt-0.5 h-4 w-4 text-primary shrink-0" /><a href="mailto:hello@newheightsrx.com" className="hover:text-primary">hello@newheightsrx.com</a></li>
             </ul>
           </div>

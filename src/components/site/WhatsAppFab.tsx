@@ -1,0 +1,22 @@
+import { waLink } from "@/lib/whatsapp";
+
+export function WhatsAppFab() {
+  return (
+    <a
+      href={waLink()}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Chat with us on WhatsApp"
+      className="group fixed bottom-5 right-5 z-50 grid h-14 w-14 place-items-center rounded-full shadow-xl shadow-black/20 transition-transform hover:scale-110 active:scale-95 sm:bottom-6 sm:right-6"
+      style={{ backgroundColor: "#25D366" }}
+    >
+      <span className="pointer-events-none absolute inset-0 -z-10 animate-ping rounded-full opacity-40" style={{ backgroundColor: "#25D366" }} />
+      <svg viewBox="0 0 32 32" className="h-7 w-7 fill-white" aria-hidden="true">
+        <path d="M19.11 17.29c-.27-.14-1.6-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.13-.42-2.15-1.33-.79-.7-1.32-1.57-1.48-1.84-.16-.27-.02-.42.12-.55.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.02-.22-.53-.45-.46-.61-.47-.16-.01-.34-.01-.52-.01s-.48.07-.73.34c-.25.27-.95.93-.95 2.27 0 1.34.98 2.63 1.11 2.81.14.18 1.93 2.95 4.67 4.14.65.28 1.16.45 1.56.58.65.21 1.25.18 1.72.11.52-.08 1.6-.65 1.83-1.28.23-.63.23-1.17.16-1.28-.07-.11-.25-.18-.52-.32zM16.03 5.33c-5.9 0-10.7 4.8-10.7 10.7 0 1.88.49 3.72 1.43 5.34L5 27l5.79-1.52a10.66 10.66 0 0 0 5.24 1.34h.01c5.9 0 10.7-4.8 10.7-10.7-.01-2.86-1.12-5.55-3.14-7.57a10.63 10.63 0 0 0-7.57-3.22zm6.24 16.94a8.85 8.85 0 0 1-6.24 2.59h-.01c-1.66 0-3.28-.45-4.7-1.29l-.34-.2-3.44.9.92-3.35-.22-.35a8.87 8.87 0 0 1-1.36-4.71c0-4.91 4-8.9 8.91-8.9 2.38 0 4.62.93 6.3 2.61 1.68 1.68 2.61 3.92 2.6 6.3 0 4.91-4 8.9-8.42 8.4z"/>
+      </svg>
+      <span className="pointer-events-none absolute right-16 top-1/2 hidden -translate-y-1/2 whitespace-nowrap rounded-full bg-foreground px-3 py-1.5 text-xs font-medium text-background opacity-0 shadow-lg transition-opacity group-hover:opacity-100 sm:block">
+        Chat on WhatsApp
+      </span>
+    </a>
+  );
+}

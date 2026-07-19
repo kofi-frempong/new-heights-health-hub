@@ -9,20 +9,15 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as UploadPrescriptionRouteImport } from './routes/upload-prescription'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ShopRouteImport } from './routes/shop'
+import { Route as SendPrescriptionRouteImport } from './routes/send-prescription'
 import { Route as HealthTipsRouteImport } from './routes/health-tips'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as HealthTipsSlugRouteImport } from './routes/health-tips.$slug'
 
-const UploadPrescriptionRoute = UploadPrescriptionRouteImport.update({
-  id: '/upload-prescription',
-  path: '/upload-prescription',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
@@ -31,6 +26,11 @@ const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
 const ShopRoute = ShopRouteImport.update({
   id: '/shop',
   path: '/shop',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SendPrescriptionRoute = SendPrescriptionRouteImport.update({
+  id: '/send-prescription',
+  path: '/send-prescription',
   getParentRoute: () => rootRouteImport,
 } as any)
 const HealthTipsRoute = HealthTipsRouteImport.update({
@@ -64,9 +64,9 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/health-tips': typeof HealthTipsRouteWithChildren
+  '/send-prescription': typeof SendPrescriptionRoute
   '/shop': typeof ShopRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
-  '/upload-prescription': typeof UploadPrescriptionRoute
   '/health-tips/$slug': typeof HealthTipsSlugRoute
 }
 export interface FileRoutesByTo {
@@ -74,9 +74,9 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/health-tips': typeof HealthTipsRouteWithChildren
+  '/send-prescription': typeof SendPrescriptionRoute
   '/shop': typeof ShopRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
-  '/upload-prescription': typeof UploadPrescriptionRoute
   '/health-tips/$slug': typeof HealthTipsSlugRoute
 }
 export interface FileRoutesById {
@@ -85,9 +85,9 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/health-tips': typeof HealthTipsRouteWithChildren
+  '/send-prescription': typeof SendPrescriptionRoute
   '/shop': typeof ShopRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
-  '/upload-prescription': typeof UploadPrescriptionRoute
   '/health-tips/$slug': typeof HealthTipsSlugRoute
 }
 export interface FileRouteTypes {
@@ -97,9 +97,9 @@ export interface FileRouteTypes {
     | '/about'
     | '/contact'
     | '/health-tips'
+    | '/send-prescription'
     | '/shop'
     | '/sitemap.xml'
-    | '/upload-prescription'
     | '/health-tips/$slug'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -107,9 +107,9 @@ export interface FileRouteTypes {
     | '/about'
     | '/contact'
     | '/health-tips'
+    | '/send-prescription'
     | '/shop'
     | '/sitemap.xml'
-    | '/upload-prescription'
     | '/health-tips/$slug'
   id:
     | '__root__'
@@ -117,9 +117,9 @@ export interface FileRouteTypes {
     | '/about'
     | '/contact'
     | '/health-tips'
+    | '/send-prescription'
     | '/shop'
     | '/sitemap.xml'
-    | '/upload-prescription'
     | '/health-tips/$slug'
   fileRoutesById: FileRoutesById
 }
@@ -128,20 +128,13 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   ContactRoute: typeof ContactRoute
   HealthTipsRoute: typeof HealthTipsRouteWithChildren
+  SendPrescriptionRoute: typeof SendPrescriptionRoute
   ShopRoute: typeof ShopRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
-  UploadPrescriptionRoute: typeof UploadPrescriptionRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/upload-prescription': {
-      id: '/upload-prescription'
-      path: '/upload-prescription'
-      fullPath: '/upload-prescription'
-      preLoaderRoute: typeof UploadPrescriptionRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/sitemap.xml': {
       id: '/sitemap.xml'
       path: '/sitemap.xml'
@@ -154,6 +147,13 @@ declare module '@tanstack/react-router' {
       path: '/shop'
       fullPath: '/shop'
       preLoaderRoute: typeof ShopRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/send-prescription': {
+      id: '/send-prescription'
+      path: '/send-prescription'
+      fullPath: '/send-prescription'
+      preLoaderRoute: typeof SendPrescriptionRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/health-tips': {
@@ -211,9 +211,9 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   ContactRoute: ContactRoute,
   HealthTipsRoute: HealthTipsRouteWithChildren,
+  SendPrescriptionRoute: SendPrescriptionRoute,
   ShopRoute: ShopRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
-  UploadPrescriptionRoute: UploadPrescriptionRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

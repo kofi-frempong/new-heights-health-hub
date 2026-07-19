@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import { PHONE_DISPLAY, PHONE_TEL, waLink } from "@/lib/whatsapp";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -83,7 +84,7 @@ function ContactPage() {
                   <Input id="email" name="email" type="email" placeholder="you@example.com" className="h-11 rounded-xl" />
                 </Field>
                 <Field id="phone" label="Phone (optional)" error={errors.phone}>
-                  <Input id="phone" name="phone" type="tel" placeholder="(555) 123-4567" className="h-11 rounded-xl" />
+                  <Input id="phone" name="phone" type="tel" placeholder="+233 24 501 2395" className="h-11 rounded-xl" />
                 </Field>
                 <Field id="subject" label="Subject" error={errors.subject}>
                   <Input id="subject" name="subject" placeholder="Refill question, insurance..." className="h-11 rounded-xl" />
@@ -104,9 +105,9 @@ function ContactPage() {
         </div>
 
         <div className="space-y-4">
-          <InfoCard icon={<Phone className="h-5 w-5" />} title="Call us" body={<a href="tel:+15551234567" className="text-primary hover:underline">(555) 123-4567</a>} sub="Fastest way to reach a pharmacist" />
+          <InfoCard icon={<Phone className="h-5 w-5" />} title="Call us" body={<a href={`tel:${PHONE_TEL}`} className="text-primary hover:underline">{PHONE_DISPLAY}</a>} sub="Fastest way to reach a pharmacist" />
           <InfoCard icon={<Mail className="h-5 w-5" />} title="Email" body={<a href="mailto:hello@newheightsrx.com" className="text-primary hover:underline">hello@newheightsrx.com</a>} sub="We respond within one business day" />
-          <InfoCard icon={<MessageCircle className="h-5 w-5" />} title="Text us" body={<a href="sms:+15551234567" className="text-primary hover:underline">Send a text</a>} sub="For quick, non-urgent questions" />
+          <InfoCard icon={<MessageCircle className="h-5 w-5" />} title="WhatsApp" body={<a href={waLink()} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Chat with us on WhatsApp</a>} sub="Best for sending prescriptions or quick questions" />
           <InfoCard icon={<MapPin className="h-5 w-5" />} title="Visit" body="128 Summit Ave, New Heights, CA 94102" sub="Parking available in the rear" />
           <div className="overflow-hidden rounded-3xl border border-border/60 bg-card">
             <div className="flex items-center gap-3 p-5">
