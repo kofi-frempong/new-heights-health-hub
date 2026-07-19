@@ -5,7 +5,7 @@ export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { title: "About Us — New Heights Pharmacy" },
-      { name: "description", content: "Meet the pharmacists behind New Heights — a licensed, community-focused pharmacy serving neighborhood families since 2012." },
+      { name: "description", content: "Meet the pharmacists behind New Heights — a licensed, community-focused pharmacy serving neighborhood families since 2024." },
       { property: "og:title", content: "About — New Heights Pharmacy" },
       { property: "og:description", content: "A licensed, community-focused pharmacy serving neighborhood families." },
     ],
@@ -107,9 +107,8 @@ function AboutPage() {
             <h3 className="mt-4 font-display text-2xl font-bold text-foreground">Pharmacy hours</h3>
             <ul className="mt-4 divide-y divide-border/60 text-sm">
               {[
-                ["Monday – Friday", "8:00 am – 8:00 pm"],
-                ["Saturday", "9:00 am – 6:00 pm"],
-                ["Sunday", "10:00 am – 4:00 pm"],
+                ["Mon - Sat", "7:30am - 10pm"],
+                ["Sunday", "2pm - 10pm"],
               ].map(([d, h]) => (
                 <li key={d} className="flex items-center justify-between py-3">
                   <span className="text-muted-foreground">{d}</span>
@@ -124,11 +123,11 @@ function AboutPage() {
                 <MapPin className="h-5 w-5" />
               </div>
               <h3 className="mt-4 font-display text-2xl font-bold text-foreground">Visit us</h3>
-              <p className="mt-2 text-sm text-muted-foreground">128 Summit Ave, New Heights, CA 94102</p>
+              <p className="mt-2 text-sm text-muted-foreground">Old Ashongman - Ablorh Adjei Road, Accra. GPS Address: GE-085-3190</p>
             </div>
             <iframe
               title="Map to New Heights Pharmacy"
-              src="https://www.openstreetmap.org/export/embed.html?bbox=-122.4406,37.7570,-122.3906,37.7970&layer=mapnik"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=-0.2370,5.5537,-0.1370,5.6537&layer=mapnik&marker=5.6037,-0.1870"
               className="h-64 w-full border-0"
               loading="lazy"
             />
