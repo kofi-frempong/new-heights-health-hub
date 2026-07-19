@@ -1,13 +1,14 @@
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { Menu, X, Phone, ShoppingCart, Upload, Plus } from "lucide-react";
+import { Menu, X, Phone, ShoppingCart, MessageCircle } from "lucide-react";
 import { useCart } from "@/lib/cart";
 import { Button } from "@/components/ui/button";
+import { Logo } from "@/components/site/Logo";
+import { PHONE_DISPLAY, PHONE_TEL, waLink } from "@/lib/whatsapp";
 
 const NAV = [
   { to: "/", label: "Home" },
   { to: "/shop", label: "Shop" },
-  { to: "/upload-prescription", label: "Upload Prescription" },
   { to: "/health-tips", label: "Health Tips" },
   { to: "/about", label: "About Us" },
   { to: "/contact", label: "Contact Us" },
@@ -20,17 +21,10 @@ export function Navbar() {
   return (
     <header className="sticky top-0 z-40 w-full border-b border-border/60 bg-background/85 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-7xl items-center gap-4 px-4 sm:px-6 lg:px-8">
-        <Link to="/" className="flex items-center gap-2 shrink-0">
-          <span className="grid h-9 w-9 place-items-center rounded-xl bg-primary text-primary-foreground">
-            <Plus className="h-5 w-5" />
-          </span>
-          <span className="hidden font-display text-lg font-bold text-foreground sm:block">
-            New Heights <span className="text-primary">Pharmacy</span>
-          </span>
-        </Link>
+        <Logo className="h-11 w-auto sm:h-12" />
 
         <nav className="ml-6 hidden items-center gap-1 lg:flex">
-          {NAV.slice(0, 2).concat(NAV.slice(3)).map((n) => (
+          {NAV.map((n) => (
             <Link
               key={n.to}
               to={n.to}
@@ -44,11 +38,11 @@ export function Navbar() {
 
         <div className="ml-auto flex items-center gap-2">
           <a
-            href="tel:+15551234567"
+            href={`tel:${PHONE_TEL}`}
             className="hidden items-center gap-2 rounded-full px-3 py-2 text-sm font-medium text-foreground hover:bg-secondary md:inline-flex"
           >
             <Phone className="h-4 w-4 text-primary" />
-            <span className="hidden lg:inline">(555) 123-4567</span>
+            <span className="hidden lg:inline">{PHONE_DISPLAY}</span>
             <span className="lg:hidden">Call</span>
           </a>
 
@@ -66,10 +60,15 @@ export function Navbar() {
             )}
           </button>
 
-          <Button asChild size="sm" className="hidden rounded-full bg-accent text-accent-foreground shadow-sm hover:bg-accent/90 md:inline-flex">
-            <Link to="/upload-prescription">
-              <Upload className="mr-1.5 h-4 w-4" /> Upload Rx
-            </Link>
+          <Button
+            asChild
+            size="sm"
+            className="hidden rounded-full text-white shadow-sm hover:opacity-90 md:inline-flex"
+            style={{ backgroundColor: "#25D366" }}
+          >
+            <a href={waLink()} target="_blank" rel="noopener noreferrer">
+              <MessageCircle className="mr-1.5 h-4 w-4" /> Send Rx via WhatsApp
+            </a>
           </Button>
 
           <button
@@ -97,8 +96,17 @@ export function Navbar() {
                 {n.label}
               </Link>
             ))}
-            <a href="tel:+15551234567" className="mt-2 flex items-center gap-2 rounded-lg bg-secondary px-3 py-2.5 text-sm font-medium text-primary">
-              <Phone className="h-4 w-4" /> (555) 123-4567
+            <a
+              href={waLink()}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-2 flex items-center gap-2 rounded-lg px-3 py-2.5 text-sm font-semibold text-white"
+              style={{ backgroundColor: "#25D366" }}
+            >
+              <MessageCircle className="h-4 w-4" /> Send Prescription via WhatsApp
+            </a>
+            <a href={`tel:${PHONE_TEL}`} className="flex items-center gap-2 rounded-lg bg-secondary px-3 py-2.5 text-sm font-medium text-primary">
+              <Phone className="h-4 w-4" /> {PHONE_DISPLAY}
             </a>
           </nav>
         </div>
