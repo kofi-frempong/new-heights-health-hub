@@ -11,7 +11,7 @@ export function Footer() {
           <div>
             <Logo className="h-14 w-auto" />
             <p className="mt-4 max-w-xs text-sm text-muted-foreground">
-              Personalized, community-first pharmacy care. In the neighborhood since 2012.
+              Personalized, community-first pharmacy care. In the neighborhood since 2024.
             </p>
             <div className="mt-5 flex gap-2">
               {[Facebook, Instagram, Twitter].map((I, i) => (
@@ -49,18 +49,17 @@ export function Footer() {
           <div>
             <h4 className="font-display text-sm font-semibold uppercase tracking-wider text-foreground">Pharmacy Hours</h4>
             <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
-              <li className="flex items-start gap-2"><Clock className="mt-0.5 h-4 w-4 text-primary shrink-0" /><span>Mon–Fri: 8am – 8pm</span></li>
-              <li className="ml-6">Saturday: 9am – 6pm</li>
-              <li className="ml-6">Sunday: 10am – 4pm</li>
+              <li className="flex items-start gap-2"><Clock className="mt-0.5 h-4 w-4 text-primary shrink-0" /><span>Mon - Sat: 7:30am - 10pm</span></li>
+              <li className="ml-6">Sunday: 2pm - 10pm</li>
             </ul>
           </div>
 
           <div>
             <h4 className="font-display text-sm font-semibold uppercase tracking-wider text-foreground">Get in Touch</h4>
             <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
-              <li className="flex items-start gap-2"><MapPin className="mt-0.5 h-4 w-4 text-primary shrink-0" /><span>128 Summit Ave,<br />New Heights, CA 94102</span></li>
+              <li className="flex items-start gap-2"><MapPin className="mt-0.5 h-4 w-4 text-primary shrink-0" /><span>Old Ashongman - Ablorh Adjei Road,<br />Accra. GPS Address: GE-085-3190</span></li>
               <li className="flex items-start gap-2"><Phone className="mt-0.5 h-4 w-4 text-primary shrink-0" /><a href={`tel:${PHONE_TEL}`} className="hover:text-primary">{PHONE_DISPLAY}</a></li>
-              <li className="flex items-start gap-2"><Mail className="mt-0.5 h-4 w-4 text-primary shrink-0" /><a href="mailto:hello@newheightsrx.com" className="hover:text-primary">hello@newheightsrx.com</a></li>
+              <li className="flex items-start gap-2"><Mail className="mt-0.5 h-4 w-4 text-primary shrink-0" /><a href="mailto:info.newheightspharma@gmail.com" className="hover:text-primary">info.newheightspharma@gmail.com</a></li>
             </ul>
           </div>
         </div>
