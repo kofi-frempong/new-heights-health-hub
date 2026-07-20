@@ -16,6 +16,7 @@ import { Navbar } from "../components/site/Navbar";
 import { Footer } from "../components/site/Footer";
 import { CartDrawer } from "../components/site/CartDrawer";
 import { WhatsAppFab } from "../components/site/WhatsAppFab";
+import { Analytics } from "@vercel/analytics/react";
 
 function NotFoundComponent() {
   return (
@@ -116,8 +117,9 @@ function RootShell({ children }: { children: ReactNode }) {
       <head>
         <HeadContent />
       </head>
-      <body>
+     <body>
         {children}
+        <Analytics />
         <Scripts />
       </body>
     </html>
