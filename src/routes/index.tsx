@@ -19,8 +19,8 @@ const TRUST = [
 ];
 
 const STEPS = [
-  { n: "01", title: "Send us your prescription on WhatsApp", desc: "Message a clear photo or PDF of your Rx — we'll take it from there." },
-  { n: "02", title: "We verify & prepare", desc: "A licensed pharmacist reviews your Rx and confirms your details." },
+  { n: "01", title: "Send us your prescription on WhatsApp", desc: "Message a clear photo or PDF of your prescription — we'll take it from there." },
+  { n: "02", title: "We verify & prepare", desc: "A licensed pharmacist reviews your prescription and confirms your details." },
   { n: "03", title: "Pickup or delivery", desc: "Choose in-store pickup or free local delivery to your door." },
 ];
 
@@ -99,7 +99,7 @@ function HomePage() {
                   <Check className="h-5 w-5" />
                 </div>
                 <div>
-                  <p className="text-sm font-semibold text-foreground">Rx ready in 45 min</p>
+                  <p className="text-sm font-semibold text-foreground">Prescription ready in 45 min</p>
                   <p className="text-xs text-muted-foreground">On average this week</p>
                 </div>
               </div>
