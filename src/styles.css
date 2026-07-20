@@ -86,7 +86,8 @@
   /* Fresh green #5FAE6B */
   --accent: oklch(0.72 0.13 148);
   --accent-foreground: oklch(1 0 0);
-  --accent2: oklch(0.72 0.13 148);
+  /* Dark magenta #8B008B */
+  --accent2: oklch(0.42 0.24 328);
   --accent2-foreground: oklch(1 0 0);
   --destructive: oklch(0.6 0.22 27);
   --destructive-foreground: oklch(0.99 0 0);
