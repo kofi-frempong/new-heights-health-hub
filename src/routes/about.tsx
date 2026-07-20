@@ -99,7 +99,7 @@ function AboutPage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
-        <div className="grid gap-8 lg:grid-cols-2">
+        <div className="mx-auto max-w-xl">
           <div className="rounded-3xl border border-border/60 bg-card p-8">
             <div className="grid h-11 w-11 place-items-center rounded-xl bg-secondary text-primary">
               <Clock className="h-5 w-5" />
@@ -116,23 +116,6 @@ function AboutPage() {
                 </li>
               ))}
             </ul>
-          </div>
-          <div className="overflow-hidden rounded-3xl border border-border/60 bg-card">
-            <div className="p-8">
-              <div className="grid h-11 w-11 place-items-center rounded-xl bg-secondary text-primary">
-                <MapPin className="h-5 w-5" />
-              </div>
-              <h3 className="mt-4 font-display text-2xl font-bold text-foreground">Visit us</h3>
-              <p className="mt-2 text-sm text-muted-foreground">Old Ashongman - Ablorh Adjei Road, Accra. GPS Address: GE-085-3190</p>
-            </div>
-            <iframe
-              title="Google Map to New Heights Pharmacy"
-              src="https://www.google.com/maps?q=Old+Ashongman+Ablorh+Adjei+Road+GE-085-3190+Accra&output=embed"
-              className="h-64 w-full border-0"
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              allowFullScreen
-            />
           </div>
         </div>
       </section>
