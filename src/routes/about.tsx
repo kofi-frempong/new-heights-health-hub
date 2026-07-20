@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ShieldCheck, Heart, Users, Sparkles, Clock, MapPin } from "lucide-react";
+import { ShieldCheck, Heart, Users, Sparkles, Clock } from "lucide-react";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
