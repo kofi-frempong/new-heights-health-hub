@@ -223,6 +223,45 @@ function HomePage() {
           ))}
         </div>
       </section>
+
+      {/* Visit us */}
+      <section className="bg-surface py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl text-center">
+            <p className="text-sm font-medium uppercase tracking-wider text-accent">Visit us</p>
+            <h2 className="mt-1 font-display text-3xl font-bold text-foreground sm:text-4xl">
+              Come find us in Accra
+            </h2>
+            <p className="mt-3 text-muted-foreground">
+              <MapPin className="mr-1 inline-block h-4 w-4 text-primary" />
+              Old Ashongman - Ablorh Adjei Road, Accra. GPS Address: GE-085-3190
+            </p>
+          </div>
+          <div className="mt-10 overflow-hidden rounded-3xl border border-border/60 bg-card shadow-sm">
+            <iframe
+              title="Google Map to New Heights Pharmacy"
+              src="https://www.google.com/maps?q=Old+Ashongman+Ablorh+Adjei+Road+GE-085-3190+Accra&output=embed"
+              className="h-96 w-full border-0"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
+            />
+          </div>
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-4">
+            <div className="rounded-3xl border border-border/60 bg-card px-6 py-4">
+              <div className="flex items-center gap-3">
+                <div className="grid h-10 w-10 place-items-center rounded-xl bg-secondary text-primary">
+                  <Clock className="h-5 w-5" />
+                </div>
+                <div>
+                  <p className="font-display font-semibold text-foreground">Pharmacy hours</p>
+                  <p className="text-sm text-muted-foreground">Mon–Sat 7:30am–10pm · Sun 2pm–10pm</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
