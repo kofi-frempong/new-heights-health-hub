@@ -122,10 +122,12 @@ function ContactPage() {
           </div>
           <div className="overflow-hidden rounded-3xl border border-border/60 bg-card">
             <iframe
-              title="Map"
-              src="https://www.openstreetmap.org/export/embed.html?bbox=-0.2370,5.5537,-0.1370,5.6537&layer=mapnik&marker=5.6037,-0.1870"
+              title="Google Map to New Heights Pharmacy"
+              src="https://www.google.com/maps?q=Old+Ashongman+Ablorh+Adjei+Road+GE-085-3190+Accra&output=embed"
               className="h-56 w-full border-0"
               loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
             />
           </div>
         </div>

@@ -67,7 +67,7 @@ export function Navbar() {
             style={{ backgroundColor: "#25D366" }}
           >
             <a href={waLink()} target="_blank" rel="noopener noreferrer">
-              <MessageCircle className="mr-1.5 h-4 w-4" /> Send Rx via WhatsApp
+              <MessageCircle className="mr-1.5 h-4 w-4" /> Send Prescription via WhatsApp
             </a>
           </Button>
 
