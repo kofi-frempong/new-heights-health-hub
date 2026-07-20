@@ -56,7 +56,7 @@ function HomePage() {
               pharmacists you can actually talk to, and wellness essentials in one place.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Button asChild size="lg" className="rounded-full bg-primary px-6 text-base hover:bg-primary/90">
+              <Button asChild size="lg" className="rounded-full px-6 text-base text-white hover:opacity-90" style={{ backgroundColor: "#25D366" }}>
                 <Link to="/shop">
                   Shop Now <ArrowRight className="ml-1.5 h-4 w-4" />
                 </Link>
@@ -176,7 +176,7 @@ function HomePage() {
             ))}
           </div>
           <div className="mt-10 text-center">
-            <Button asChild size="lg" className="rounded-full bg-primary px-6 text-base hover:bg-primary/90">
+            <Button asChild size="lg" className="rounded-full px-6 text-base text-white hover:opacity-90" style={{ backgroundColor: "#25D366" }}>
               <a href={waLink()} target="_blank" rel="noopener noreferrer">
                 <MessageCircle className="mr-1.5 h-4 w-4" /> Send Prescription via WhatsApp
               </a>
