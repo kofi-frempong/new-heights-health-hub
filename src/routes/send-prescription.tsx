@@ -16,7 +16,7 @@ export const Route = createFileRoute("/send-prescription")({
 });
 
 const STEPS = [
-  { icon: Camera, title: "Snap your Rx", desc: "Take a clear photo or save your prescription as a PDF." },
+  { icon: Camera, title: "Snap your prescription", desc: "Take a clear photo or save your prescription as a PDF." },
   { icon: MessageCircle, title: "Send it on WhatsApp", desc: "Tap the button below to open a chat with our pharmacists." },
   { icon: Truck, title: "Pickup or delivery", desc: "We'll verify, prepare, and get it to you the way you prefer." },
 ];
