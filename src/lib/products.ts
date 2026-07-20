@@ -25,7 +25,7 @@ export const PRODUCTS: Product[] = [
   { id: "p11", name: "SPF 50 Sunscreen", price: 13.25, category: "Personal Care", color: "#F4B740", emoji: "☀️", popularity: 80, createdAt: 14 },
   { id: "p12", name: "Prenatal Vitamins", price: 24.0, category: "Baby & Mom", color: "#E8A0BF", emoji: "🤰", popularity: 68, createdAt: 9 },
   { id: "p13", name: "Baby Gentle Wash", price: 8.75, category: "Baby & Mom", color: "#F0C987", emoji: "🍼", popularity: 50, createdAt: 6 },
-  { id: "p14", name: "Amoxicillin 500mg (Rx)", price: 24.0, category: "Prescription", rx: true, color: "#2E6F95", emoji: "💊", popularity: 45, createdAt: 21 },
-  { id: "p15", name: "Lisinopril 10mg (Rx)", price: 12.0, category: "Prescription", rx: true, color: "#5FAE6B", emoji: "💊", popularity: 40, createdAt: 19 },
-  { id: "p16", name: "Metformin 500mg (Rx)", price: 15.0, category: "Prescription", rx: true, color: "#8B6BC5", emoji: "💊", popularity: 42, createdAt: 17 },
+  { id: "p14", name: "Amoxicillin 500mg (Prescription)", price: 24.0, category: "Prescription", rx: true, color: "#2E6F95", emoji: "💊", popularity: 45, createdAt: 21 },
+  { id: "p15", name: "Lisinopril 10mg (Prescription)", price: 12.0, category: "Prescription", rx: true, color: "#5FAE6B", emoji: "💊", popularity: 40, createdAt: 19 },
+  { id: "p16", name: "Metformin 500mg (Prescription)", price: 15.0, category: "Prescription", rx: true, color: "#8B6BC5", emoji: "💊", popularity: 42, createdAt: 17 },
 ];
