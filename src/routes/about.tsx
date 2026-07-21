@@ -13,12 +13,6 @@ export const Route = createFileRoute("/about")({
   component: AboutPage,
 });
 
-const TEAM = [
-  { name: "Dr. Amina Rivera", role: "Pharmacist-in-Charge, PharmD", initials: "AR", bg: "#2E6F95" },
-  { name: "Marcus Chen", role: "Clinical Pharmacist, PharmD", initials: "MC", bg: "#5FAE6B" },
-  { name: "Priya Shah", role: "Pharmacist, PharmD, BCACP", initials: "PS", bg: "#7FC7B0" },
-  { name: "Jordan Ellis", role: "Pharmacy Technician, CPhT", initials: "JE", bg: "#F4B740" },
-];
 
 const WHY = [
   { icon: ShieldCheck, title: "Licensed & accredited", desc: "State-licensed with rigorous safety standards." },
@@ -53,28 +47,6 @@ function AboutPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl text-center">
-          <p className="text-sm font-medium uppercase tracking-wider text-accent">Meet the pharmacists</p>
-          <h2 className="mt-1 font-display text-3xl font-bold text-foreground sm:text-4xl">
-            The team behind your care
-          </h2>
-        </div>
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {TEAM.map((m) => (
-            <div key={m.name} className="rounded-3xl border border-border/60 bg-card p-6 text-center">
-              <div
-                className="mx-auto grid h-24 w-24 place-items-center rounded-full font-display text-2xl font-bold text-white"
-                style={{ background: `linear-gradient(135deg, ${m.bg}, ${m.bg}cc)` }}
-              >
-                {m.initials}
-              </div>
-              <h3 className="mt-4 font-display font-semibold text-foreground">{m.name}</h3>
-              <p className="mt-1 text-sm text-muted-foreground">{m.role}</p>
-            </div>
-          ))}
-        </div>
-      </section>
 
       <section className="bg-surface py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
