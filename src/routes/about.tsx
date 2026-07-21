@@ -13,12 +13,6 @@ export const Route = createFileRoute("/about")({
   component: AboutPage,
 });
 
-const TEAM = [
-  { name: "Dr. Amina Rivera", role: "Pharmacist-in-Charge, PharmD", initials: "AR", bg: "#2E6F95" },
-  { name: "Marcus Chen", role: "Clinical Pharmacist, PharmD", initials: "MC", bg: "#5FAE6B" },
-  { name: "Priya Shah", role: "Pharmacist, PharmD, BCACP", initials: "PS", bg: "#7FC7B0" },
-  { name: "Jordan Ellis", role: "Pharmacy Technician, CPhT", initials: "JE", bg: "#F4B740" },
-];
 
 const WHY = [
   { icon: ShieldCheck, title: "Licensed & accredited", desc: "State-licensed with rigorous safety standards." },
