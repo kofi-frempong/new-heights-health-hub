@@ -70,6 +70,20 @@ function ArticlePage() {
         <div className="space-y-6 text-lg leading-relaxed text-foreground/90">
           {article.body.map((p: string, i: number) => <p key={i}>{p}</p>)}
         </div>
+        {article.sources.length > 0 && (
+          <div className="mt-10 rounded-2xl border border-border/60 bg-surface p-6">
+            <h2 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">Sources</h2>
+            <ul className="mt-3 space-y-2 text-sm">
+              {article.sources.map((s) => (
+                <li key={s.url}>
+                  <a href={s.url} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                    {s.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </div>
 
       <section className="border-t border-border/60 bg-surface py-16">
