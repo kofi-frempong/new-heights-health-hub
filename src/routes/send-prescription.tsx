@@ -18,7 +18,7 @@ export const Route = createFileRoute("/send-prescription")({
 
 const STEPS = [
   { icon: Camera, title: "Snap your prescription", desc: "Take a clear photo or save your prescription as a PDF." },
-  { icon: MessageCircle, title: "Send it on WhatsApp", desc: "Tap the button below to open a chat with our pharmacists." },
+  { icon: WhatsAppLogo, title: "Send it on WhatsApp", desc: "Tap the button below to open a chat with our pharmacists." },
   { icon: Truck, title: "Pickup or delivery", desc: "We'll verify, prepare, and get it to you the way you prefer." },
 ];
 
@@ -44,7 +44,7 @@ function SendRxPage() {
             style={{ backgroundColor: "#25D366" }}
           >
             <a href={waLink()} target="_blank" rel="noopener noreferrer">
-              <MessageCircle className="mr-2 h-5 w-5" /> Open WhatsApp chat
+              <WhatsAppLogo className="mr-2 h-5 w-5" /> Open WhatsApp chat
             </a>
           </Button>
           <Button asChild size="lg" variant="outline" className="rounded-full px-6 text-base">

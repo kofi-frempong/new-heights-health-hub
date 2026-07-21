@@ -40,8 +40,8 @@ export function Footer() {
                 </li>
               ))}
               <li>
-                <a href={waLink()} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-muted-foreground transition-colors hover:text-primary">
-                  <MessageCircle className="h-3.5 w-3.5" /> Send Prescription on WhatsApp
+                <a href={waLink()} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 rounded-full px-2 py-1 text-sm font-medium text-white transition-colors hover:opacity-90" style={{ backgroundColor: "#25D366" }}>
+                  <WhatsAppLogo className="h-3.5 w-3.5" /> Send Prescription on WhatsApp
                 </a>
               </li>
             </ul>
