@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, useSearch } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
 import { Search, SlidersHorizontal } from "lucide-react";
 import { Input } from "@/components/ui/input";
@@ -13,8 +13,14 @@ import {
 import { ProductCard } from "@/components/site/ProductCard";
 import { PRODUCTS } from "@/lib/products";
 import { CATEGORIES } from "@/lib/products";
+import { z } from "zod";
+
+const shopSearchSchema = z.object({
+  q: z.string().optional().default(""),
+});
 
 export const Route = createFileRoute("/shop")({
+  validateSearch: shopSearchSchema,
   head: () => ({
     meta: [
       { title: "Shop — New Heights Pharmacy" },
