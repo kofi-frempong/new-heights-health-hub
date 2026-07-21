@@ -1,5 +1,6 @@
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
-import { ArrowRight, Truck, ShieldCheck, Zap, Check, Star, MessageCircle, Clock, MapPin, Search } from "lucide-react";
+import { ArrowRight, Truck, ShieldCheck, Zap, Check, Star, Clock, MapPin, Search } from "lucide-react";
+import { WhatsAppLogo } from "@/components/site/WhatsAppLogo";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ProductCard } from "@/components/site/ProductCard";

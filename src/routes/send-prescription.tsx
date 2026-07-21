@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { MessageCircle, ShieldCheck, Camera, Truck } from "lucide-react";
+import { ShieldCheck, Camera, Truck } from "lucide-react";
+import { WhatsAppLogo } from "@/components/site/WhatsAppLogo";
 import { Button } from "@/components/ui/button";
 import { PHONE_DISPLAY, PHONE_TEL, waLink } from "@/lib/whatsapp";
 

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { Menu, X, Phone, ShoppingCart, MessageCircle } from "lucide-react";
+import { Menu, X, Phone, ShoppingCart } from "lucide-react";
+import { WhatsAppLogo } from "@/components/site/WhatsAppLogo";
 import { useCart } from "@/lib/cart";
 import { Button } from "@/components/ui/button";
 import { Logo } from "@/components/site/Logo";

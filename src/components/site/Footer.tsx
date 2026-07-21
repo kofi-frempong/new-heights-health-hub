@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
-import { Facebook, Instagram, Twitter, MapPin, Phone, Mail, Clock, MessageCircle } from "lucide-react";
+import { Facebook, Instagram, Twitter, MapPin, Phone, Mail, Clock } from "lucide-react";
+import { WhatsAppLogo } from "@/components/site/WhatsAppLogo";
 import { Logo } from "@/components/site/Logo";
 import { PHONE_DISPLAY, PHONE_TEL, waLink } from "@/lib/whatsapp";
 
