@@ -1,12 +1,14 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Truck, ShieldCheck, Zap, Check, Star, MessageCircle, Clock, MapPin } from "lucide-react";
+import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
+import { ArrowRight, Truck, ShieldCheck, Zap, Check, Star, MessageCircle, Clock, MapPin, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import { ProductCard } from "@/components/site/ProductCard";
 import { PRODUCTS } from "@/lib/products";
 import { ARTICLES } from "@/lib/articles";
 import heroImg from "@/assets/hero-pharmacist.jpg";
 import logoAsset from "@/assets/new-heights-logo.jpeg.asset.json";
 import { waLink } from "@/lib/whatsapp";
+import { useState } from "react";
 
 export const Route = createFileRoute("/")({
   component: HomePage,
