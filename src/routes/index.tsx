@@ -1,12 +1,14 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Truck, ShieldCheck, Zap, Check, Star, MessageCircle, Clock, MapPin } from "lucide-react";
+import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
+import { ArrowRight, Truck, ShieldCheck, Zap, Check, Star, MessageCircle, Clock, MapPin, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import { ProductCard } from "@/components/site/ProductCard";
 import { PRODUCTS } from "@/lib/products";
 import { ARTICLES } from "@/lib/articles";
 import heroImg from "@/assets/hero-pharmacist.jpg";
 import logoAsset from "@/assets/new-heights-logo.jpeg.asset.json";
 import { waLink } from "@/lib/whatsapp";
+import { useState } from "react";
 
 export const Route = createFileRoute("/")({
   component: HomePage,
@@ -25,11 +27,42 @@ const STEPS = [
 ];
 
 function HomePage() {
+  const navigate = useNavigate();
+  const [search, setSearch] = useState("");
   const featured = PRODUCTS.slice(0, 8);
   const tips = ARTICLES.slice(0, 3);
 
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (search.trim()) {
+      navigate({ to: "/shop", search: { q: search.trim() } });
+    }
+  };
+
   return (
     <div>
+      {/* Top search bar */}
+      <section className="border-b border-border/60 bg-card/50 py-3 backdrop-blur">
+        <div className="mx-auto flex max-w-7xl items-center gap-3 px-4 sm:px-6 lg:px-8">
+          <form onSubmit={handleSearch} className="relative flex-1 max-w-xl">
+            <Search className="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+            <Input
+              placeholder="Search for medicines, vitamins, first aid..."
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              className="h-11 rounded-full border-border/60 bg-background pl-10 pr-10"
+            />
+            <button
+              type="submit"
+              className="absolute right-1.5 top-1/2 -translate-y-1/2 rounded-full bg-primary px-3 py-1.5 text-xs font-medium text-white hover:bg-primary/90"
+            >
+              Search
+            </button>
+          </form>
+          <span className="hidden text-sm text-muted-foreground sm:inline">Fast refills, delivered.</span>
+        </div>
+      </section>
+
       {/* Hero */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 -z-10 bg-gradient-to-b from-secondary/60 via-background to-background" />
