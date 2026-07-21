@@ -35,7 +35,8 @@ export const Route = createFileRoute("/shop")({
 const PAGE = 8;
 
 function ShopPage() {
-  const [q, setQ] = useState("");
+  const { q: initialQ } = useSearch({ from: "/shop" });
+  const [q, setQ] = useState(initialQ);
   const [cats, setCats] = useState<string[]>([]);
   const [sort, setSort] = useState<"popularity" | "price-asc" | "price-desc" | "newest">("popularity");
   const [limit, setLimit] = useState(PAGE);
