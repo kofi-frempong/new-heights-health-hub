@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import logoAsset from "@/assets/new-heights-logo.jpeg.asset.json";
+import logoAsset from "@/assets/new-heights-logo.png.asset.json";
 
 export function Logo({ className = "h-11 w-auto", linked = true }: { className?: string; linked?: boolean }) {
   const img = (
