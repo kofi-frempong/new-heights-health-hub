@@ -7,7 +7,7 @@ import { ProductCard } from "@/components/site/ProductCard";
 import { PRODUCTS } from "@/lib/products";
 import { ARTICLES } from "@/lib/articles";
 import heroImg from "@/assets/hero-pharmacist.jpg";
-import logoAsset from "@/assets/new-heights-logo.jpeg.asset.json";
+import logoAsset from "@/assets/new-heights-logo.png.asset.json";
 import { waLink } from "@/lib/whatsapp";
 import { useState } from "react";
 
