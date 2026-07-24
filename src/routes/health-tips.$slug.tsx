@@ -74,7 +74,7 @@ function ArticlePage() {
           <div className="mt-10 rounded-2xl border border-border/60 bg-surface p-6">
             <h2 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">Sources</h2>
             <ul className="mt-3 space-y-2 text-sm">
-              {article.sources.map((s) => (
+              {article.sources.map((s: { label: string; url: string }) => (
                 <li key={s.url}>
                   <a href={s.url} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
                     {s.label}
