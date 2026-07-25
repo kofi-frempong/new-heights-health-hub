@@ -84,7 +84,7 @@ function ContactPage() {
                   <Input id="email" name="email" type="email" placeholder="you@example.com" className="h-11 rounded-xl" />
                 </Field>
                 <Field id="phone" label="Phone (optional)" error={errors.phone}>
-                  <Input id="phone" name="phone" type="tel" placeholder="+233 24 501 2395" className="h-11 rounded-xl" />
+                  <Input id="phone" name="phone" type="tel" placeholder="0245012395" className="h-11 rounded-xl" />
                 </Field>
                 <Field id="subject" label="Subject" error={errors.subject}>
                   <Input id="subject" name="subject" placeholder="Refill question, insurance..." className="h-11 rounded-xl" />
