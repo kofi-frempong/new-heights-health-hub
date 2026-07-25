@@ -1,10 +1,10 @@
 import { Link } from "@tanstack/react-router";
-import logoAsset from "@/assets/new-heights-logo.png.asset.json";
+import logoUrl from "@/assets/new-heights-logo.png";
 
 export function Logo({ className = "h-11 w-auto", linked = true }: { className?: string; linked?: boolean }) {
   const img = (
     <img
-      src={logoAsset.url}
+      src={logoUrl}
       alt="New Heights Pharmacy"
       className={`${className} object-contain`}
     />
