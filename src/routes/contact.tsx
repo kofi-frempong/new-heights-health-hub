@@ -57,7 +57,7 @@ function ContactPage() {
           </h1>
           <p className="mx-auto mt-3 max-w-2xl text-muted-foreground">
             A licensed pharmacist is available during pharmacy hours. For urgent medical
-            questions, please call 911 or your provider.
+            questions, please call 0245012395.
           </p>
         </div>
       </section>
