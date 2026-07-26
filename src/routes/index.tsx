@@ -70,7 +70,7 @@ function HomePage() {
         <div className="absolute -top-32 -right-40 -z-10 h-96 w-96 rounded-full bg-accent/10 blur-3xl" />
         <div className="absolute -bottom-24 -left-32 -z-10 h-96 w-96 rounded-full bg-primary/10 blur-3xl" />
 
-        <div className="mx-auto grid max-w-7xl gap-12 px-4 py-16 sm:px-6 lg:grid-cols-2 lg:items-center lg:gap-8 lg:px-8 lg:py-24">
+        <div className="mx-auto grid max-w-7xl gap-12 px-4 py-8 sm:px-6 lg:grid-cols-2 lg:items-center lg:gap-8 lg:px-8 lg:py-12">
           <div>
             <img
               src={logoUrl}
@@ -299,3 +299,4 @@ function HomePage() {
     </div>
   );
 }
+
