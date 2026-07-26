@@ -10,7 +10,15 @@ export function ProductCard({ p }: { p: Product }) {
         className="relative flex aspect-square items-center justify-center text-6xl"
         style={{ backgroundColor: `${p.color}1f` }}
       >
-        <span className="drop-shadow-sm transition-transform duration-300 group-hover:scale-110">{p.emoji}</span>
+        {p.image ? (
+          <img
+            src={p.image}
+            alt={p.name}
+            className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
+          />
+        ) : (
+          <span className="drop-shadow-sm transition-transform duration-300 group-hover:scale-110">{p.emoji}</span>
+        )}
         {p.rx && (
           <span className="absolute left-3 top-3 inline-flex items-center gap-1 rounded-full bg-background/95 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wide text-primary">
             <Lock className="h-3 w-3" /> Prescription required
@@ -39,3 +47,5 @@ export function ProductCard({ p }: { p: Product }) {
     </div>
   );
 }
+
+

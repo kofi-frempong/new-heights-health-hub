@@ -9,6 +9,7 @@ export type Product = {
   badge?: string;
   color: string;
   emoji: string;
+  image?: string;
   description?: string;
   popularity?: number;
   createdAt?: number;
@@ -69,3 +70,4 @@ export function useCart() {
   if (!ctx) throw new Error("useCart must be used within CartProvider");
   return ctx;
 }
+

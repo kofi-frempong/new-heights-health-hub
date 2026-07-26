@@ -1,4 +1,5 @@
 import type { Product } from "./cart";
+import benylinImg from "@/assets/benylin-original-syrup.jpg";
 
 export const CATEGORIES = [
   "Prescription",
@@ -38,5 +39,8 @@ export const PRODUCTS: Product[] = [
   { id: "p14", name: "Amoxicillin 500mg (Prescription)", price: 24.0, category: "Prescription", rx: true, color: "#2E6F95", emoji: "💊", popularity: 45, createdAt: 21 },
   { id: "p15", name: "Lisinopril 10mg (Prescription)", price: 12.0, category: "Prescription", rx: true, color: "#5FAE6B", emoji: "💊", popularity: 40, createdAt: 19 },
   { id: "p16", name: "Metformin 500mg (Prescription)", price: 15.0, category: "Prescription", rx: true, color: "#8B6BC5", emoji: "💊", popularity: 42, createdAt: 17 },
+  { id: "p17", name: "Benylin Original Cough Syrup 100ml", price: 8.99, category: "Cough, Cold & Flu", color: "#8B5FA6", emoji: "??", image: benylinImg, badge: "New", popularity: 60, createdAt: 30 },
 ];
+
+
 
