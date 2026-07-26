@@ -7,7 +7,7 @@ import { ProductCard } from "@/components/site/ProductCard";
 import { PRODUCTS } from "@/lib/products";
 import { ARTICLES } from "@/lib/articles";
 import heroImg from "@/assets/hero-pharmacist.jpg";
-import logoAsset from "@/assets/new-heights-logo.png.asset.json";
+import logoUrl from "@/assets/new-heights-logo.png";
 import { waLink } from "@/lib/whatsapp";
 import { useState } from "react";
 
@@ -73,7 +73,7 @@ function HomePage() {
         <div className="mx-auto grid max-w-7xl gap-12 px-4 py-16 sm:px-6 lg:grid-cols-2 lg:items-center lg:gap-8 lg:px-8 lg:py-24">
           <div>
             <img
-              src={logoAsset.url}
+              src={logoUrl}
               alt="New Heights Pharmacy"
               className="mb-6 h-20 w-auto object-contain sm:h-24"
             />

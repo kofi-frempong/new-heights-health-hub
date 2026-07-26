@@ -32,10 +32,10 @@ function AboutPage() {
               A pharmacy built around people, not prescriptions.
             </h1>
             <p className="mt-5 text-lg text-muted-foreground">
-              New Heights Pharmacy opened in 2012 with a simple idea: a neighborhood
-              pharmacy should feel like healthcare, not like a checkout line. More than a
-              decade later, we're still the same independently-owned team — filling refills,
-              answering questions, and knowing our patients by name.
+              New Heights Pharmacy opened in 2024 with a simple idea: a neighborhood
+              pharmacy should feel like healthcare, not like a checkout line. Today, we're
+              still the same independently-owned team — filling refills, answering questions,
+              and knowing our patients by name.
             </p>
           </div>
           <div className="grid grid-cols-2 gap-4">

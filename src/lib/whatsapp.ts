@@ -1,5 +1,5 @@
 export const WHATSAPP_NUMBER = "233245012395";
-export const PHONE_DISPLAY = "+233 (0)24 501 2395";
+export const PHONE_DISPLAY = "0245012395";
 export const PHONE_TEL = "+233245012395";
 
 const DEFAULT_MSG = "Hi, I'd like to send my prescription to New Heights Pharmacy.";
