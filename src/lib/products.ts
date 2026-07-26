@@ -7,6 +7,16 @@ export const CATEGORIES = [
   "Personal Care",
   "Baby & Mom",
   "Medical Devices",
+  "Allergies",
+  "Diet & Fitness",
+  "Eye & Ear Care",
+  "Sexual Wellness",
+  "Conception & Pregnancy",
+  "Cosmetic & Beauty",
+  "Men's Health",
+  "Women's Health",
+  "Cough, Cold & Flu",
+  "Pain Relief",
 ] as const;
 
 export type Category = (typeof CATEGORIES)[number];
@@ -29,3 +39,4 @@ export const PRODUCTS: Product[] = [
   { id: "p15", name: "Lisinopril 10mg (Prescription)", price: 12.0, category: "Prescription", rx: true, color: "#5FAE6B", emoji: "💊", popularity: 40, createdAt: 19 },
   { id: "p16", name: "Metformin 500mg (Prescription)", price: 15.0, category: "Prescription", rx: true, color: "#8B6BC5", emoji: "💊", popularity: 42, createdAt: 17 },
 ];
+
