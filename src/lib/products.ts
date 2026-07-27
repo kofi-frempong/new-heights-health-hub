@@ -1,4 +1,4 @@
-﻿import type { Product } from "./cart";
+import type { Product } from "./cart";
 
 export const CATEGORIES = [
   "Prescription",
@@ -62,4 +62,19 @@ export const PRODUCTS: Product[] = [
   { id: "p24", name: "Viscof-S Expectorant", price: 6.25, color: "#F4B740", emoji: "C", popularity: 45, createdAt: 37, ...auto("Viscof-S  Expectorant.jpg") },
   { id: "p25", name: "Zubes Expectorant Cough Mixture", price: 5.75, color: "#5FAE6B", emoji: "C", popularity: 45, createdAt: 38, ...auto("Zubes Expectorant Cough Mixture.jpg") },
   { id: "p26", name: "Zubes Extra Strong Cough Mixture", price: 6.0, color: "#5FAE6B", emoji: "C", popularity: 45, createdAt: 39, ...auto("Zubes Extra Strong Cough Mixture.jpg") },
+  { id: "p27", name: "Buttercup Cough Syrup", price: 6.5, color: "#F4B740", emoji: "C", popularity: 45, createdAt: 40, ...auto("Buttercup Cough Surup.jpg") },
+  { id: "p28", name: "Flemex Adult Expectorant Cough Syrup", price: 7.0, color: "#7FC7B0", emoji: "C", popularity: 45, createdAt: 41, ...auto("Flemex Adult Expectorant Cough Syrup.jpg") },
+  { id: "p29", name: "Go Cough Expectorant", price: 6.25, color: "#8B6BC5", emoji: "C", popularity: 45, createdAt: 42, ...auto("Go Cough Expectorant.jpg") },
+  { id: "p30", name: "Kofof Cough Syrup", price: 5.75, color: "#E76F75", emoji: "C", popularity: 45, createdAt: 43, ...auto("Kofof Cough Syrup.jpg") },
+  { id: "p31", name: "Letalin Expectorant Cough Syrup", price: 7.25, color: "#5FAE6B", emoji: "C", popularity: 45, createdAt: 44, ...auto("Letalin Expectorant Cough Syrup.jpg") },
+  { id: "p32", name: "Luex Adult Chesty Cough Syrup", price: 6.75, color: "#6FA8DC", emoji: "C", popularity: 45, createdAt: 45, ...auto("Luex Adult Chesty Cough Syrup.jpg") },
+  { id: "p33", name: "Luex Adult Dry Cough Syrup", price: 6.75, color: "#6FA8DC", emoji: "C", popularity: 45, createdAt: 46, ...auto("Luex Adult Dry Cough Syrup.jpg") },
+  { id: "p34", name: "Mucolex Adult Expectorant Cough Syrup", price: 6.9, color: "#7FC7B0", emoji: "C", popularity: 45, createdAt: 47, ...auto("Mucolex Adult Expectorant Cough Syrup.jpg") },
+  { id: "p35", name: "Rhinathiol Children Expectorant Cough Syrup", price: 7.5, color: "#E8A0BF", emoji: "C", popularity: 45, createdAt: 48, ...auto("Rhinathiol Children Expectorant Cough Syrup.jpg") },
+  { id: "p36", name: "Rhinathiol Expectorant Cough Syrup", price: 7.5, color: "#2E6F95", emoji: "C", popularity: 45, createdAt: 49, ...auto("Rhinathiol Expectorant Cough Syrup.jpg") },
+  { id: "p37", name: "Samalin Adult Cough Syrup", price: 8.0, color: "#8B5FA6", emoji: "C", popularity: 45, createdAt: 50, ...auto("Samalin Adult Cough Syrup.jpg") },
+  { id: "p38", name: "Samalin Adult Cough Syrup Non-Drowsy", price: 8.25, color: "#8B5FA6", emoji: "C", popularity: 45, createdAt: 51, ...auto("Samalin Adult Cough Syrup Non-Drowsy.jpg") },
+  { id: "p39", name: "Stopkof Adult Dry Cough Syrup", price: 6.0, color: "#E76F75", emoji: "C", popularity: 45, createdAt: 52, ...auto("Stopkof Adult Dry Cough Syrup.jpg") },
+  { id: "p40", name: "Viscof Cough Syrup", price: 6.25, color: "#F4B740", emoji: "C", popularity: 45, createdAt: 53, ...auto("Viscof Cough Syrup.jpg") },
 ];
+
