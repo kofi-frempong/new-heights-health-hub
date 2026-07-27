@@ -44,7 +44,7 @@ export const PRODUCTS: Product[] = [
   { id: "p6", name: "Cough & Cold Syrup", price: 11.4, category: "OTC", color: "#8B6BC5", emoji: "C", popularity: 60, createdAt: 5 },
   { id: "p7", name: "First Aid Kit - Home", price: 34.9, category: "Medical Devices", color: "#E76F75", emoji: "F", badge: "Popular", popularity: 82, createdAt: 22 },
   { id: "p8", name: "Digital Thermometer", price: 16.0, category: "Medical Devices", color: "#2E6F95", emoji: "T", popularity: 55, createdAt: 3 },
-  { id: "p9", name: "Blood Pressure Monitor", price: 62.0, category: "Medical Devices", color: "#5FAE6B", emoji: "B", popularity: 65, createdAt: 25 },
+  { id: "p9", name: "Blood Pressure Monitor", price: 62.0, color: "#5FAE6B", emoji: "B", popularity: 65, createdAt: 25, ...auto("greenline-bp-monitor.jpg") },
   { id: "p10", name: "Sensitive Skin Moisturizer", price: 15.5, category: "Personal Care", color: "#7FC7B0", emoji: "S", popularity: 78, createdAt: 10 },
   { id: "p11", name: "SPF 50 Sunscreen", price: 13.25, category: "Personal Care", color: "#F4B740", emoji: "S", popularity: 80, createdAt: 14 },
   { id: "p12", name: "Prenatal Vitamins", price: 24.0, category: "Baby & Mom", color: "#E8A0BF", emoji: "P", popularity: 68, createdAt: 9 },
