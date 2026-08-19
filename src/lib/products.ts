@@ -96,7 +96,7 @@ export const PRODUCTS: Product[] = [
   { id: "p72", name: "Procold Tablets", price: 5.75, color: "#5FAE6B", emoji: "F", popularity: 45, createdAt: 92, ...auto("procold.jpg") },
   { id: "p73", name: "Piriton Allergy Relief Tablets", price: 8.0, color: "#E76F75", emoji: "A", popularity: 52, createdAt: 93, ...auto("piriton-tablets.jpg") },
   { id: "p74", name: "Piriton Children's Syrup", price: 8.5, color: "#E8A0BF", emoji: "A", popularity: 52, createdAt: 94, ...auto("piriton-childrens-syrup.jpg") },
-  { id: "p75", name: "Claritin Loratadine 10mg Tablets", price: 12.0, color: "#2E6F95", emoji: "A", popularity: 56, createdAt: 95, ...auto("claritin-loratadine.jpg") },
+  { id: "p75", name: "Clarityne Loratadine Syrup 100ml", price: 12.0, color: "#2E6F95", emoji: "A", popularity: 56, createdAt: 95, ...auto("claritin-loratadine.jpg") },
   { id: "p76", name: "Rhizin Cetirizine 10mg Tablets (30)", price: 9.0, color: "#5FAE6B", emoji: "A", popularity: 50, createdAt: 96, ...auto("rhizin-tablets.jpg") },
   { id: "p77", name: "Rhizin Syrup", price: 8.5, color: "#5FAE6B", emoji: "A", popularity: 48, createdAt: 97, ...auto("rhizin-syrup.jpg") },
   { id: "p78", name: "Rhizine 10mg Tablets", price: 8.75, color: "#5FAE6B", emoji: "A", popularity: 48, createdAt: 98, ...auto("rhizine-tablets.jpg") },
