@@ -129,7 +129,7 @@ export const PRODUCTS: Product[] = [
   { id: "p123", name: "Diflucan 150mg Fluconazole Capsule", price: 17.1, color: "#8B5FA6", emoji: "P", rx: true, popularity: 43, createdAt: 223, ...auto("diflucan-150.jpg") },
   { id: "p124", name: "Fluconazole 150mg Capsule (Teva)", price: 20.8, color: "#2E6F95", emoji: "P", rx: true, popularity: 44, createdAt: 224, ...auto("fluconazole-150-teva.jpg") },
   { id: "p125", name: "Zithromax 250mg Tablets", price: 24.5, color: "#5FAE6B", emoji: "P", rx: true, popularity: 45, createdAt: 225, ...auto("zithromax-250-tablets.jpg") },
-  { id: "p126", name: "Flucono-Denk 150 Capsule", price: 28.2, color: "#8B008B", emoji: "P", rx: true, popularity: 46, createdAt: 226, ...auto("flucono-denk-150.jpg") },
+  
   { id: "p127", name: "Fluco-Denk 150mg Capsule", price: 31.9, color: "#7FC7B0", emoji: "P", rx: true, popularity: 47, createdAt: 227, ...auto("fluco-denk-150.jpg") },
   { id: "p128", name: "Tagera Forte Secnidazole Tablets", price: 35.6, color: "#5B8FB0", emoji: "P", rx: true, popularity: 48, createdAt: 228, ...auto("tagera-forte.jpg") },
   { id: "p129", name: "Azilex Azithromycin Oral Suspension 15ml", price: 39.3, color: "#8B5FA6", emoji: "P", rx: true, popularity: 49, createdAt: 229, ...auto("azilex-suspension.jpg") },
