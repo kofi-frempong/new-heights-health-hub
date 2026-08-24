@@ -4,12 +4,17 @@ import { ShieldCheck, Heart, Users, Sparkles, Clock } from "lucide-react";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About Us — New Heights Pharmacy" },
-      { name: "description", content: "Meet the pharmacists behind New Heights — a licensed, community-focused pharmacy serving neighborhood families since 2024." },
-      { property: "og:title", content: "About — New Heights Pharmacy" },
-      { property: "og:description", content: "A licensed, community-focused pharmacy serving neighborhood families." },
+      { title: "About New Heights Pharmacy – Trusted Pharmacy in Accra, Ghana" },
+      { name: "description", content: "New Heights Pharmacy is a licensed, community-focused pharmacy in Accra serving customers across Ghana with OTC medicines, health products, and prescriptions." },
+      { property: "og:title", content: "About New Heights Pharmacy – Trusted Pharmacy in Accra, Ghana" },
+      { property: "og:description", content: "A licensed pharmacy in Accra serving customers across Ghana." },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "/about" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: "/about" }],
   }),
+
   component: AboutPage,
 });
 
