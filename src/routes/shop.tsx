@@ -23,14 +23,19 @@ export const Route = createFileRoute("/shop")({
   validateSearch: shopSearchSchema,
   head: () => ({
     meta: [
-      { title: "Shop — New Heights Pharmacy" },
-      { name: "description", content: "Browse vitamins, OTC medicine, first aid, and personal care essentials." },
-      { property: "og:title", content: "Shop — New Heights Pharmacy" },
-      { property: "og:description", content: "Vitamins, OTC medicine, first aid, and personal care essentials." },
+      { title: "Shop Medicines Online in Ghana – New Heights Pharmacy" },
+      { name: "description", content: "Buy medicines online in Ghana from New Heights Pharmacy in Accra. Order OTC drugs, vitamins, first aid, and prescription medicines with fast delivery across Ghana." },
+      { property: "og:title", content: "Shop Medicines Online in Ghana – New Heights Pharmacy" },
+      { property: "og:description", content: "Order OTC drugs in Ghana — vitamins, first aid, and prescription medicines delivered across Ghana." },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "/shop" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: "/shop" }],
   }),
   component: ShopPage,
 });
+
 
 const PAGE = 8;
 
