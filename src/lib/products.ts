@@ -133,7 +133,7 @@ export const PRODUCTS: Product[] = [
   { id: "p127", name: "Fluco-Denk 150mg Capsule", price: 31.9, color: "#7FC7B0", emoji: "P", rx: true, popularity: 47, createdAt: 227, ...auto("fluco-denk-150.jpg") },
   { id: "p128", name: "Tagera Forte Secnidazole Tablets", price: 35.6, color: "#5B8FB0", emoji: "P", rx: true, popularity: 48, createdAt: 228, ...auto("tagera-forte.jpg") },
   { id: "p129", name: "Azilex Azithromycin Oral Suspension 15ml", price: 39.3, color: "#8B5FA6", emoji: "P", rx: true, popularity: 49, createdAt: 229, ...auto("azilex-suspension.jpg") },
-  { id: "p130", name: "Azilex 200mg/5ml Oral Suspension", price: 43.0, color: "#2E6F95", emoji: "P", rx: true, popularity: 50, createdAt: 230, ...auto("azilex-200-suspension.jpg") },
+  
   { id: "p131", name: "Zithromax Oral Suspension 200mg/5ml", price: 46.7, color: "#5FAE6B", emoji: "P", rx: true, popularity: 51, createdAt: 231, ...auto("zithromax-suspension.jpg") },
   { id: "p132", name: "Augmentin 457mg/5ml Oral Suspension", price: 50.4, color: "#8B008B", emoji: "P", rx: true, popularity: 52, createdAt: 232, ...auto("augmentin-457-suspension.jpg") },
   { id: "p133", name: "Klacid P125 Clarithromycin Suspension 50ml", price: 14.1, color: "#7FC7B0", emoji: "P", rx: true, popularity: 53, createdAt: 233, ...auto("klacid-p125.jpg") },
