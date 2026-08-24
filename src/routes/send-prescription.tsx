@@ -7,12 +7,17 @@ import { PHONE_DISPLAY, PHONE_TEL, waLink } from "@/lib/whatsapp";
 export const Route = createFileRoute("/send-prescription")({
   head: () => ({
     meta: [
-      { title: "Send Prescription via WhatsApp — New Heights Pharmacy" },
-      { name: "description", content: "Send your prescription to New Heights Pharmacy on WhatsApp. Free local delivery or in-store pickup." },
-      { property: "og:title", content: "Send Prescription via WhatsApp — New Heights Pharmacy" },
-      { property: "og:description", content: "The easiest way to get your prescription filled — chat with our pharmacists on WhatsApp." },
+      { title: "Send Prescription on WhatsApp – Pharmacy in Accra, Ghana" },
+      { name: "description", content: "Send your prescription to New Heights Pharmacy in Accra on WhatsApp. Trusted pharmacy serving customers across Ghana with delivery or in-store pickup." },
+      { property: "og:title", content: "Send Prescription on WhatsApp – Pharmacy in Accra, Ghana" },
+      { property: "og:description", content: "Chat with our licensed pharmacists in Accra and get your prescription filled anywhere in Ghana." },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "/send-prescription" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: "/send-prescription" }],
   }),
+
   component: SendRxPage,
 });
 

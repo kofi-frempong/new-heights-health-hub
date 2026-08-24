@@ -4,12 +4,17 @@ import { ShieldCheck, Heart, Users, Sparkles, Clock } from "lucide-react";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About Us — New Heights Pharmacy" },
-      { name: "description", content: "Meet the pharmacists behind New Heights — a licensed, community-focused pharmacy serving neighborhood families since 2024." },
-      { property: "og:title", content: "About — New Heights Pharmacy" },
-      { property: "og:description", content: "A licensed, community-focused pharmacy serving neighborhood families." },
+      { title: "About New Heights Pharmacy – Trusted Pharmacy in Accra, Ghana" },
+      { name: "description", content: "New Heights Pharmacy is a licensed, community-focused pharmacy in Accra serving customers across Ghana with OTC medicines, health products, and prescriptions." },
+      { property: "og:title", content: "About New Heights Pharmacy – Trusted Pharmacy in Accra, Ghana" },
+      { property: "og:description", content: "A licensed pharmacy in Accra serving customers across Ghana." },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "/about" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: "/about" }],
   }),
+
   component: AboutPage,
 });
 
@@ -33,10 +38,15 @@ function AboutPage() {
             </h1>
             <p className="mt-5 text-lg text-muted-foreground">
               New Heights Pharmacy opened in 2024 with a simple idea: a neighborhood
-              pharmacy should feel like healthcare, not like a checkout line. Today, we're
-              still the same independently-owned team — filling refills, answering questions,
-              and knowing our patients by name.
+              pharmacy should feel like healthcare, not like a checkout line. Today we're a
+              trusted pharmacy in Accra serving customers across Ghana — filling refills,
+              answering questions, and helping people buy medicines online in Ghana from a
+              team that knows them by name.
             </p>
+            <p className="mt-4 text-sm font-medium text-primary">
+              Available in Ghana · Order OTC drugs in Ghana with delivery nationwide.
+            </p>
+
           </div>
           <div className="grid grid-cols-2 gap-4">
             <Stat n="12+" l="Years serving the community" />

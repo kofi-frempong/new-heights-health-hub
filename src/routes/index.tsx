@@ -12,8 +12,41 @@ import { waLink } from "@/lib/whatsapp";
 import { useState } from "react";
 
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "New Heights Pharmacy – Buy Medicines in Ghana | Accra Pharmacy" },
+      { name: "description", content: "New Heights Pharmacy is a trusted pharmacy in Accra, Ghana. Buy OTC medicines, health products, and prescriptions online. Fast delivery across Ghana." },
+      { property: "og:title", content: "New Heights Pharmacy – Buy Medicines in Ghana | Accra Pharmacy" },
+      { property: "og:description", content: "Trusted pharmacy in Accra, Ghana. Buy OTC medicines, health products, and prescriptions online with fast delivery across Ghana." },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "/" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+    links: [{ rel: "canonical", href: "/" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Pharmacy",
+          name: "New Heights Pharmacy",
+          description: "Trusted pharmacy in Accra, Ghana. Buy medicines online in Ghana with delivery.",
+          telephone: "+233245012395",
+          email: "info.newheightspharma@gmail.com",
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "Old Ashongman - Ablorh Adjei Road, GPS GE-085-3190",
+            addressLocality: "Accra",
+            addressCountry: "GH",
+          },
+          openingHours: ["Mo-Sa 07:30-22:00", "Su 14:00-22:00"],
+        }),
+      },
+    ],
+  }),
   component: HomePage,
 });
+
 
 const TRUST = [
   { icon: Truck, title: "Free local delivery", desc: "Same-day to nearby ZIPs" },
@@ -79,16 +112,21 @@ function HomePage() {
             />
             <span className="inline-flex items-center gap-2 rounded-full border border-border/60 bg-background/70 px-3 py-1 text-xs font-medium text-primary backdrop-blur">
               <span className="h-1.5 w-1.5 rounded-full bg-accent" />
-              Pharmacy is open — refills in under an hour
+              Trusted pharmacy in Accra — refills in under an hour
             </span>
             <h1 className="mt-5 font-display text-4xl font-bold leading-[1.05] tracking-tight text-foreground sm:text-5xl lg:text-6xl">
               Your Health,<br />
               <span className="text-primary">Our Priority.</span>
             </h1>
             <p className="mt-5 max-w-lg text-lg text-muted-foreground">
-              A neighborhood pharmacy that feels personal — free local delivery, licensed
-              pharmacists you can actually talk to, and wellness essentials in one place.
+              New Heights Pharmacy is a trusted pharmacy in Accra where you can buy medicines
+              online in Ghana — OTC drugs, prescriptions, and wellness essentials, with free
+              local delivery and licensed pharmacists you can actually talk to.
             </p>
+            <p className="mt-3 max-w-lg text-sm font-medium text-primary">
+              Available in Ghana · Pharmacy serving customers across Ghana
+            </p>
+
             <div className="mt-8 flex flex-wrap gap-3">
               <Button asChild size="lg" className="rounded-full px-6 text-base text-white hover:opacity-90" style={{ backgroundColor: "#25D366" }}>
                 <Link to="/shop">

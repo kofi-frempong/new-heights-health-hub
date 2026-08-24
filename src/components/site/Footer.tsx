@@ -12,8 +12,10 @@ export function Footer() {
           <div>
             <Logo className="h-14 w-auto" />
             <p className="mt-4 max-w-xs text-sm text-muted-foreground">
-              Personalized, community-first pharmacy care. In the neighborhood since 2024.
+              A trusted pharmacy in Accra serving customers across Ghana. Buy medicines online
+              in Ghana — OTC drugs, health products, and prescriptions. In the neighborhood since 2024.
             </p>
+
             <div className="mt-5 flex gap-2">
               {[Facebook, Instagram, Twitter].map((I, i) => (
                 <a key={i} href="#" aria-label="Social link" className="grid h-9 w-9 place-items-center rounded-full bg-background text-primary transition-colors hover:bg-primary hover:text-primary-foreground">
