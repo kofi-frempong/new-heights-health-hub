@@ -8,12 +8,17 @@ import { ARTICLES, ARTICLE_CATEGORIES } from "@/lib/articles";
 export const Route = createFileRoute("/health-tips")({
   head: () => ({
     meta: [
-      { title: "Health Tips — New Heights Pharmacy" },
-      { name: "description", content: "Practical health advice from our licensed pharmacists — nutrition, chronic care, seasonal health, and medication safety." },
-      { property: "og:title", content: "Health Tips — New Heights Pharmacy" },
-      { property: "og:description", content: "Practical health advice from our licensed pharmacists." },
+      { title: "Health Tips from a Trusted Pharmacy in Accra, Ghana | New Heights Pharmacy" },
+      { name: "description", content: "Practical health advice from licensed pharmacists at New Heights Pharmacy in Accra — nutrition, chronic care, seasonal health, and medication safety in Ghana." },
+      { property: "og:title", content: "Health Tips from a Trusted Pharmacy in Accra, Ghana" },
+      { property: "og:description", content: "Practical health advice from licensed pharmacists serving customers across Ghana." },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "/health-tips" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: "/health-tips" }],
   }),
+
   component: HealthTipsLayout,
 });
 
