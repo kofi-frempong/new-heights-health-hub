@@ -12,8 +12,41 @@ import { waLink } from "@/lib/whatsapp";
 import { useState } from "react";
 
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "New Heights Pharmacy – Buy Medicines in Ghana | Accra Pharmacy" },
+      { name: "description", content: "New Heights Pharmacy is a trusted pharmacy in Accra, Ghana. Buy OTC medicines, health products, and prescriptions online. Fast delivery across Ghana." },
+      { property: "og:title", content: "New Heights Pharmacy – Buy Medicines in Ghana | Accra Pharmacy" },
+      { property: "og:description", content: "Trusted pharmacy in Accra, Ghana. Buy OTC medicines, health products, and prescriptions online with fast delivery across Ghana." },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "/" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+    links: [{ rel: "canonical", href: "/" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Pharmacy",
+          name: "New Heights Pharmacy",
+          description: "Trusted pharmacy in Accra, Ghana. Buy medicines online in Ghana with delivery.",
+          telephone: "+233245012395",
+          email: "info.newheightspharma@gmail.com",
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "Old Ashongman - Ablorh Adjei Road, GPS GE-085-3190",
+            addressLocality: "Accra",
+            addressCountry: "GH",
+          },
+          openingHours: ["Mo-Sa 07:30-22:00", "Su 14:00-22:00"],
+        }),
+      },
+    ],
+  }),
   component: HomePage,
 });
+
 
 const TRUST = [
   { icon: Truck, title: "Free local delivery", desc: "Same-day to nearby ZIPs" },
