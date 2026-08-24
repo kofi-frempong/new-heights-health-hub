@@ -38,10 +38,15 @@ function AboutPage() {
             </h1>
             <p className="mt-5 text-lg text-muted-foreground">
               New Heights Pharmacy opened in 2024 with a simple idea: a neighborhood
-              pharmacy should feel like healthcare, not like a checkout line. Today, we're
-              still the same independently-owned team — filling refills, answering questions,
-              and knowing our patients by name.
+              pharmacy should feel like healthcare, not like a checkout line. Today we're a
+              trusted pharmacy in Accra serving customers across Ghana — filling refills,
+              answering questions, and helping people buy medicines online in Ghana from a
+              team that knows them by name.
             </p>
+            <p className="mt-4 text-sm font-medium text-primary">
+              Available in Ghana · Order OTC drugs in Ghana with delivery nationwide.
+            </p>
+
           </div>
           <div className="grid grid-cols-2 gap-4">
             <Stat n="12+" l="Years serving the community" />
