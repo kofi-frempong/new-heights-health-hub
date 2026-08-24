@@ -56,9 +56,11 @@ function ContactPage() {
             We're here to help
           </h1>
           <p className="mx-auto mt-3 max-w-2xl text-muted-foreground">
-            A licensed pharmacist is available during pharmacy hours. For urgent medical
-            questions, please call 0245012395.
+            New Heights Pharmacy is a trusted pharmacy in Accra serving customers across Ghana.
+            A licensed pharmacist is available during pharmacy hours to help you order OTC drugs
+            in Ghana or refill a prescription. For urgent medical questions, please call 0245012395.
           </p>
+
         </div>
       </section>
 
