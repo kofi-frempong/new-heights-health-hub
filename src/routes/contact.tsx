@@ -11,12 +11,17 @@ import { PHONE_DISPLAY, PHONE_TEL, waLink } from "@/lib/whatsapp";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact Us — New Heights Pharmacy" },
-      { name: "description", content: "Get in touch with New Heights Pharmacy — call, email, or send us a message." },
-      { property: "og:title", content: "Contact — New Heights Pharmacy" },
-      { property: "og:description", content: "Call, email, or send us a message." },
+      { title: "Contact New Heights Pharmacy – Accra, Ghana" },
+      { name: "description", content: "Contact New Heights Pharmacy in Accra, Ghana. Call, WhatsApp, or email us to buy medicines online in Ghana or ask a licensed pharmacist a question." },
+      { property: "og:title", content: "Contact New Heights Pharmacy – Accra, Ghana" },
+      { property: "og:description", content: "Reach our licensed pharmacists in Accra — pharmacy serving customers across Ghana." },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "/contact" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: "/contact" }],
   }),
+
   component: ContactPage,
 });
 
