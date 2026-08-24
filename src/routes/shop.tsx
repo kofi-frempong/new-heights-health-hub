@@ -67,8 +67,13 @@ function ShopPage() {
   return (
     <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
       <div className="mb-8">
-        <h1 className="font-display text-3xl font-bold text-foreground sm:text-4xl">Shop</h1>
-        <p className="mt-2 text-muted-foreground">Everyday wellness essentials, thoughtfully curated.</p>
+        <h1 className="font-display text-3xl font-bold text-foreground sm:text-4xl">Shop Medicines Online in Ghana</h1>
+        <p className="mt-2 text-muted-foreground">
+          Buy medicines online in Ghana from a trusted pharmacy in Accra — order OTC drugs in Ghana,
+          vitamins, first aid, personal care, and prescription medicines. Every category below is
+          available in Ghana with delivery to customers across the country.
+        </p>
+
       </div>
 
       <div className="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center">
