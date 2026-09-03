@@ -55,9 +55,7 @@ function ShopPage() {
       (cats.length === 0 || cats.includes(p.category)) &&
       (q.trim() === "" || p.name.toLowerCase().includes(q.toLowerCase())),
     );
-    if (sort === "price-asc") list = [...list].sort((a, b) => a.price - b.price);
-    else if (sort === "price-desc") list = [...list].sort((a, b) => b.price - a.price);
-    else if (sort === "newest") list = [...list].sort((a, b) => (b.createdAt ?? 0) - (a.createdAt ?? 0));
+    if (sort === "newest") list = [...list].sort((a, b) => (b.createdAt ?? 0) - (a.createdAt ?? 0));
     else list = [...list].sort((a, b) => (b.popularity ?? 0) - (a.popularity ?? 0));
     return list;
   }, [q, cats, sort]);
