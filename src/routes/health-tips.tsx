@@ -70,8 +70,8 @@ function HealthTipsIndex() {
                 params={{ slug: a.slug }}
                 className="group flex flex-col overflow-hidden rounded-3xl border border-border/60 bg-card transition-shadow hover:shadow-lg"
               >
-                <div className={`flex aspect-[16/10] items-center justify-center bg-gradient-to-br ${a.gradient} text-7xl`}>
-                  {a.icon}
+                <div className="aspect-[16/10] overflow-hidden">
+                  <img src={a.image} alt={a.title} loading="lazy" className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" />
                 </div>
                 <div className="flex flex-1 flex-col gap-3 p-6">
                   <span className="w-fit rounded-full bg-secondary px-2.5 py-1 text-[11px] font-medium text-primary">{a.category}</span>
