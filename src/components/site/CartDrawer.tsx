@@ -2,7 +2,7 @@ import { Sheet, SheetContent, SheetHeader, SheetTitle } from "@/components/ui/sh
 import { useCart } from "@/lib/cart";
 import { waLink } from "@/lib/whatsapp";
 import { Minus, Plus, Trash2, ShoppingBag } from "lucide-react";
-import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
+import { WhatsAppLogo } from "@/components/site/WhatsAppLogo";
 
 export function CartDrawer() {
   const { items, open, setOpen, setQty, remove, clear } = useCart();
@@ -46,7 +46,7 @@ export function CartDrawer() {
                         </button>
                       </div>
                       <p className="text-xs text-muted-foreground">{i.category}</p>
-                      <div className="mt-2 flex items-center justify-between">
+                      <div className="mt-2 flex items-center">
                         <div className="flex items-center gap-1 rounded-full border border-border bg-background">
                           <button onClick={() => setQty(i.id, i.qty - 1)} className="grid h-7 w-7 place-items-center rounded-full hover:bg-secondary" aria-label="Decrease">
                             <Minus className="h-3 w-3" />
@@ -56,7 +56,6 @@ export function CartDrawer() {
                             <Plus className="h-3 w-3" />
                           </button>
                         </div>
-                        <p className="text-sm font-semibold text-foreground">${(i.qty * i.price).toFixed(2)}</p>
                       </div>
                     </div>
                   </li>
