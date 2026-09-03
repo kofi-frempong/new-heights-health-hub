@@ -120,7 +120,7 @@ function HomePage() {
             </h1>
             <p className="mt-5 max-w-lg text-lg text-muted-foreground">
               New Heights Pharmacy is a trusted pharmacy in Accra where you can buy medicines
-              online in Ghana — OTC drugs, prescriptions, and wellness essentials, with free
+              online in Ghana — OTC drugs, prescriptions, and wellness essentials, with arranged
               local delivery and licensed pharmacists you can actually talk to.
             </p>
             <p className="mt-3 max-w-lg text-sm font-medium text-primary">
