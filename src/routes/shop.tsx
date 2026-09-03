@@ -43,7 +43,7 @@ function ShopPage() {
   const { q: initialQ } = useSearch({ from: "/shop" });
   const [q, setQ] = useState(initialQ);
   const [cats, setCats] = useState<string[]>([]);
-  const [sort, setSort] = useState<"popularity" | "price-asc" | "price-desc" | "newest">("popularity");
+  const [sort, setSort] = useState<"popularity" | "newest">("popularity");
   const [limit, setLimit] = useState(PAGE);
   const [filtersOpen, setFiltersOpen] = useState(false);
 
@@ -92,8 +92,6 @@ function ShopPage() {
           </SelectTrigger>
           <SelectContent>
             <SelectItem value="popularity">Most popular</SelectItem>
-            <SelectItem value="price-asc">Price: low to high</SelectItem>
-            <SelectItem value="price-desc">Price: high to low</SelectItem>
             <SelectItem value="newest">Newest</SelectItem>
           </SelectContent>
         </Select>
