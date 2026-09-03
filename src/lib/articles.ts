@@ -1,4 +1,11 @@
-﻿export type Article = {
+import fluImg from "@/assets/health/flu.jpg";
+import labelsImg from "@/assets/health/labels.jpg";
+import diabetesImg from "@/assets/health/diabetes.jpg";
+import nutritionImg from "@/assets/health/nutrition.jpg";
+import storageImg from "@/assets/health/storage.jpg";
+import allergyImg from "@/assets/health/allergy.jpg";
+
+export type Article = {
   slug: string;
   title: string;
   excerpt: string;
@@ -8,6 +15,7 @@
   readTime: string;
   gradient: string;
   icon: string;
+  image: string;
   body: string[];
   sources: { label: string; url: string }[];
 };
