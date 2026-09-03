@@ -64,14 +64,17 @@ export function CartDrawer() {
             </div>
 
             <div className="border-t border-border/60 px-6 py-4">
-              <div className="mb-3 flex items-center justify-between text-sm">
-                <span className="text-muted-foreground">Subtotal</span>
-                <span className="font-display text-lg font-bold text-foreground">${subtotal.toFixed(2)}</span>
-              </div>
-              <p className="mb-4 text-xs text-muted-foreground">Free local delivery on orders over $35.</p>
-              <Button className="w-full rounded-full bg-primary py-6 text-base hover:bg-primary/90" onClick={() => alert("Checkout is a demo — connect a backend to complete purchases.")}>
-                Checkout
-              </Button>
+              <p className="mb-4 text-xs text-muted-foreground">
+                Send your order to our pharmacists on WhatsApp — we'll confirm availability, pricing, and arrange local delivery.
+              </p>
+              <a
+                href={waLink(orderMessage)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex w-full items-center justify-center gap-2 rounded-full bg-[#25D366] py-3.5 text-base font-semibold text-white transition hover:bg-[#1fb857]"
+              >
+                <WhatsAppLogo className="h-5 w-5" /> Order via WhatsApp
+              </a>
               <button onClick={clear} className="mt-2 w-full text-xs text-muted-foreground hover:text-destructive">
                 Clear cart
               </button>
