@@ -115,8 +115,8 @@ function HomePage() {
               Trusted pharmacy in Accra — refills in under an hour
             </span>
             <h1 className="mt-5 font-display text-4xl font-bold leading-[1.05] tracking-tight text-foreground sm:text-5xl lg:text-6xl">
-              Your Health,<br />
-              <span className="text-primary">Our Priority.</span>
+              Going Beyond Care,<br />
+              <span className="text-primary">Delivering Excellence.</span>
             </h1>
             <p className="mt-5 max-w-lg text-lg text-muted-foreground">
               New Heights Pharmacy is a trusted pharmacy in Accra where you can buy medicines
