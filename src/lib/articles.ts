@@ -1,4 +1,11 @@
-﻿export type Article = {
+import fluImg from "@/assets/health/flu.jpg";
+import labelsImg from "@/assets/health/labels.jpg";
+import diabetesImg from "@/assets/health/diabetes.jpg";
+import nutritionImg from "@/assets/health/nutrition.jpg";
+import storageImg from "@/assets/health/storage.jpg";
+import allergyImg from "@/assets/health/allergy.jpg";
+
+export type Article = {
   slug: string;
   title: string;
   excerpt: string;
@@ -8,6 +15,7 @@
   readTime: string;
   gradient: string;
   icon: string;
+  image: string;
   body: string[];
   sources: { label: string; url: string }[];
 };
@@ -32,6 +40,7 @@ export const ARTICLES: Article[] = [
     readTime: "6 min read",
     gradient: "from-[#dff1e6] to-[#c6e6f2]",
     icon: "🤧",
+    image: fluImg,
     body: [
       "Flu season looks a little different each year, but the fundamentals stay the same: get vaccinated early, wash your hands often, and know when to call your pharmacist.",
       "The CDC recommends most adults receive their annual flu shot in September or October, before flu activity typically peaks. If you're managing a chronic condition, our pharmacists can help you time your vaccine so it doesn't clash with other treatments.",
@@ -53,6 +62,7 @@ export const ARTICLES: Article[] = [
     readTime: "5 min read",
     gradient: "from-[#e7edf7] to-[#e1f0e5]",
     icon: "💊",
+    image: labelsImg,
     body: [
       "Every over-the-counter medication label follows the same layout, and once you know where to look, you can spot interactions and dosing issues in under a minute.",
       "Start with the active ingredient — not the brand name. Two products with different names may share the same molecule, and doubling up is a common cause of accidental overdose.",
@@ -73,6 +83,7 @@ export const ARTICLES: Article[] = [
     readTime: "8 min read",
     gradient: "from-[#e8f4e9] to-[#f2ecdb]",
     icon: "❤️",
+    image: diabetesImg,
     body: [
       "Managing type 2 diabetes is less about big changes and more about the small, repeatable habits you can sustain for years.",
       "Consistent meal timing helps your medication work with your body, not against it. If you're on metformin, taking it with food can reduce stomach upset.",
@@ -94,6 +105,7 @@ export const ARTICLES: Article[] = [
     readTime: "4 min read",
     gradient: "from-[#eaf6e7] to-[#dbeef5]",
     icon: "🥗",
+    image: nutritionImg,
     body: [
       "Most nutrition advice is more marketing than medicine. Three habits do most of the work: enough protein, enough fiber, and enough water.",
       "Aim for a palm-sized portion of protein at each meal and 25–35 grams of fiber daily. It steadies blood sugar and supports a healthy microbiome.",
@@ -115,6 +127,7 @@ export const ARTICLES: Article[] = [
     readTime: "3 min read",
     gradient: "from-[#f2ecdb] to-[#e7edf7]",
     icon: "🗄️",
+    image: storageImg,
     body: [
       "Heat and humidity break down most medications faster than the printed expiration suggests. That's a problem, because the bathroom is exactly where most of us keep them.",
       "A cool, dry drawer in the bedroom or kitchen works better. Keep them in the original container, and out of reach of children and pets.",
@@ -134,6 +147,7 @@ export const ARTICLES: Article[] = [
     readTime: "5 min read",
     gradient: "from-[#dbeef5] to-[#e8f4e9]",
     icon: "🌸",
+    image: allergyImg,
     body: [
       "Seasonal allergies are miserable but manageable. Start non-drowsy antihistamines a week before symptoms typically begin and keep them consistent through the season.",
       "A saline nasal rinse once a day clears pollen before it triggers a reaction. If symptoms persist despite treatment, ask about prescription options.",

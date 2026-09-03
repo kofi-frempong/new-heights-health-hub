@@ -60,8 +60,8 @@ function ArticlePage() {
             <span>{article.date}</span>
             <span className="inline-flex items-center gap-1"><Clock className="h-3.5 w-3.5" /> {article.readTime}</span>
           </div>
-          <div className="mt-10 flex aspect-[16/9] items-center justify-center rounded-3xl bg-background/60 text-8xl shadow-inner">
-            {article.icon}
+          <div className="mt-10 aspect-[16/9] overflow-hidden rounded-3xl shadow-inner">
+            <img src={article.image} alt={article.title} className="h-full w-full object-cover" />
           </div>
         </div>
       </div>
@@ -97,7 +97,9 @@ function ArticlePage() {
                 params={{ slug: a.slug }}
                 className="group flex flex-col overflow-hidden rounded-3xl border border-border/60 bg-card transition-shadow hover:shadow-lg"
               >
-                <div className={`flex aspect-[16/10] items-center justify-center bg-gradient-to-br ${a.gradient} text-6xl`}>{a.icon}</div>
+                <div className="aspect-[16/10] overflow-hidden">
+                  <img src={a.image} alt={a.title} loading="lazy" className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" />
+                </div>
                 <div className="flex flex-1 flex-col gap-2 p-5">
                   <span className="w-fit rounded-full bg-secondary px-2 py-0.5 text-[11px] font-medium text-primary">{a.category}</span>
                   <h3 className="font-display font-semibold text-foreground group-hover:text-primary">{a.title}</h3>
