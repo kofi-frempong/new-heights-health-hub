@@ -1,10 +1,15 @@
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from "@/components/ui/sheet";
-import { Button } from "@/components/ui/button";
 import { useCart } from "@/lib/cart";
+import { waLink } from "@/lib/whatsapp";
 import { Minus, Plus, Trash2, ShoppingBag } from "lucide-react";
+import { WhatsAppIcon } from "@/components/site/WhatsAppIcon";
 
 export function CartDrawer() {
-  const { items, open, setOpen, setQty, remove, subtotal, clear } = useCart();
+  const { items, open, setOpen, setQty, remove, clear } = useCart();
+
+  const orderMessage =
+    "Hi, I'd like to order the following from New Heights Pharmacy:\n" +
+    items.map((i) => `• ${i.name} x${i.qty}`).join("\n");
 
   return (
     <Sheet open={open} onOpenChange={setOpen}>
